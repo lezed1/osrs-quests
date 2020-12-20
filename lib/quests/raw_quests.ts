@@ -191,7 +191,9 @@ const all_quests: quest[] = [
     series: null,
     requirements: {
       quests: [],
-      levels: [{ skill: Skill(SkillEnum.Quest), level: 12, boostable: false }],
+      levels: [
+        { skill: Skill(SkillEnum.Quest_points), level: 12, boostable: false },
+      ],
     },
     rewards: { experience: [], quest_points: 3 },
   },
@@ -512,7 +514,7 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: Skill(SkillEnum.Quest), level: 32, boostable: false },
+        { skill: Skill(SkillEnum.Quest_points), level: 32, boostable: false },
         { skill: Skill(SkillEnum.Crafting), level: 8, boostable: false },
       ],
     },
@@ -543,7 +545,9 @@ const all_quests: quest[] = [
         'Bone Voyage',
         'Client of Kourend',
       ],
-      levels: [{ skill: Skill(SkillEnum.Quest), level: 200, boostable: false }],
+      levels: [
+        { skill: Skill(SkillEnum.Quest_points), level: 200, boostable: false },
+      ],
     },
     rewards: {
       experience: [
@@ -735,7 +739,7 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: Skill(SkillEnum.Quest), level: 20, boostable: false },
+        { skill: Skill(SkillEnum.Quest_points), level: 20, boostable: false },
         { skill: Skill(SkillEnum.Firemaking), level: 20, boostable: false },
         { skill: Skill(SkillEnum.Farming), level: 30, boostable: true },
         { skill: Skill(SkillEnum.Crafting), level: 36, boostable: false },
@@ -1050,7 +1054,9 @@ const all_quests: quest[] = [
         'Dragon Slayer',
         'Druidic Ritual',
       ],
-      levels: [{ skill: Skill(SkillEnum.Quest), level: 55, boostable: false }],
+      levels: [
+        { skill: Skill(SkillEnum.Quest_points), level: 55, boostable: false },
+      ],
     },
     rewards: {
       experience: [
@@ -1267,7 +1273,7 @@ const all_quests: quest[] = [
         'Waterfall Quest',
       ],
       levels: [
-        { skill: Skill(SkillEnum.Quest), level: 107, boostable: false },
+        { skill: Skill(SkillEnum.Quest_points), level: 107, boostable: false },
         { skill: Skill(SkillEnum.Agility), level: 50, boostable: true },
         { skill: Skill(SkillEnum.Crafting), level: 50, boostable: false },
         { skill: Skill(SkillEnum.Herblore), level: 45, boostable: true },
@@ -1806,7 +1812,7 @@ const all_quests: quest[] = [
         'Horror from the Deep',
       ],
       levels: [
-        { skill: Skill(SkillEnum.Quest), level: 175, boostable: false },
+        { skill: Skill(SkillEnum.Quest_points), level: 175, boostable: false },
         { skill: Skill(SkillEnum.Cooking), level: 70, boostable: true },
         { skill: Skill(SkillEnum.Agility), level: 48, boostable: false },
         { skill: Skill(SkillEnum.Mining), level: 50, boostable: true },
@@ -1836,7 +1842,9 @@ const all_quests: quest[] = [
     series: 'Temple Knight',
     requirements: {
       quests: [],
-      levels: [{ skill: Skill(SkillEnum.Quest), level: 12, boostable: false }],
+      levels: [
+        { skill: Skill(SkillEnum.Quest_points), level: 12, boostable: false },
+      ],
     },
     rewards: {
       experience: [
@@ -2166,7 +2174,7 @@ const all_quests: quest[] = [
     requirements: {
       quests: ['One Small Favour', 'Garden of Tranquillity'],
       levels: [
-        { skill: Skill(SkillEnum.Quest), level: 100, boostable: false },
+        { skill: Skill(SkillEnum.Quest_points), level: 100, boostable: false },
         { skill: Skill(SkillEnum.Magic), level: 66, boostable: true },
         { skill: Skill(SkillEnum.Cooking), level: 62, boostable: true },
         { skill: Skill(SkillEnum.Fishing), level: 62, boostable: true },
@@ -2241,7 +2249,7 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: Skill(SkillEnum.Quest), level: 43, boostable: false },
+        { skill: Skill(SkillEnum.Quest_points), level: 43, boostable: false },
         { skill: Skill(SkillEnum.Firemaking), level: 49, boostable: false },
         { skill: Skill(SkillEnum.Crafting), level: 20, boostable: false },
         { skill: Skill(SkillEnum.Mining), level: 20, boostable: false },
@@ -2958,7 +2966,9 @@ const all_quests: quest[] = [
         'The Lost Tribe',
         'Priest in Peril',
       ],
-      levels: [{ skill: Skill(SkillEnum.Quest), level: 32, boostable: false }],
+      levels: [
+        { skill: Skill(SkillEnum.Quest_points), level: 32, boostable: false },
+      ],
     },
     rewards: {
       experience: [{ skill: Skill(SkillEnum.Slayer), amount: 5000 }],
