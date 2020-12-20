@@ -6,7 +6,8 @@
     "build": "next build && next export",
     "start": "next dev",
     "lint": "eslint --ext .ts,.tsx",
-    "prettier": "prettier --write . --ignore-path .gitignore",
+    "prettier": "prettier --write --ignore-path .gitignore .",
+    "prettier-check": "prettier --check --ignore-path .gitignore .",
     "prettier-watch": "yarn run prettier && onchange \"**/*\" --exclude-path .gitignore -- prettier --write --ignore-path .gitignore --ignore-unknown {{changed}}"
   },
   "husky": {
