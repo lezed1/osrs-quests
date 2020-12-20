@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import * as Quests from '../../lib/quests';
 import Layout from '../../components/layout';
+import { all_quests_by_id } from '../../lib/quests/all';
 
 export const routeBase = 'quests';
 
@@ -10,7 +10,7 @@ const QuestList = () => (
     <div>
       <h3>Please select a quest.</h3>
       <ul>
-        {Array.from(Quests.all_quests_by_id.values()).map((quest) => (
+        {Array.from(all_quests_by_id.values()).map((quest) => (
           <li key={quest.id}>
             <Link href={`/${routeBase}/${quest.id}`}>{quest.name}</Link>
           </li>

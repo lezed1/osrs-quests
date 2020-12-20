@@ -4938,6 +4938,11 @@ tree-kill@^1.2.2:
   resolved "https://registry.yarnpkg.com/tree-kill/-/tree-kill-1.2.2.tgz#4ca09a9092c88b73a7cdc5e8a01b507b0790a0cc"
   integrity sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==
 
+ts-brand@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/ts-brand/-/ts-brand-0.0.2.tgz#b6cbca6ac94df1050a05844e23944eaeda1738a0"
+  integrity sha512-UhSzWY4On9ZHIj6DKkRYVN/8OaprbLAZ3b/Y2AJwdl6oozSABsQ0PvwDh4vOVdkvOtWQOkIrjctZ1kj8YfF3jA==
+
 ts-pnp@^1.1.6:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/ts-pnp/-/ts-pnp-1.2.0.tgz#a500ad084b0798f1c3071af391e65912c86bca92"
