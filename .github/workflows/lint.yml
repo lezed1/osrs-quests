@@ -1,11 +1,10 @@
-
 name: Compile app
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -17,4 +16,3 @@ jobs:
       - run: yarn install
       - run: yarn run prettier-check
       - run: yarn run lint
-      - run: yarn run build
