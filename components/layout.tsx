@@ -29,7 +29,9 @@ export default function Layout({ children }) {
           </ul>
         </div>
       </div>
-      <div className="grid-y">{children}</div>
+      <div className="grid-container">
+        <div className="grid-y">{children}</div>
+      </div>
     </div>
   );
 }
