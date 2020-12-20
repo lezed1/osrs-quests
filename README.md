@@ -34,10 +34,10 @@ yarn run prettier-watch
 
 This will use Prettier to style any files that have changed.
 
-### Static build
+### Check build
 
-To build a static version of the website inside the `/out` folder, run:
+To check that the site builds, use:
 
 ```bash
-yarn run build
+yarn run check-build
 ```

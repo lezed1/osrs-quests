@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
     "start": "next dev",
+    "check-build": "next build",
     "lint": "eslint --ext .ts,.tsx",
     "prettier": "prettier --write --ignore-path .gitignore .",
     "prettier-check": "prettier --check --ignore-path .gitignore .",
