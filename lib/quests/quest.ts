@@ -1,5 +1,6 @@
 import { Id } from './id';
 import { Name } from './name';
+import { Skill } from './skill';
 
 export default interface quest {
   id: Id;
@@ -12,11 +13,11 @@ export default interface quest {
   series: string | null;
   requirements: {
     quests: string[];
-    levels: { skill: string; level: number; boostable: boolean }[];
+    levels: { skill: Skill; level: number; boostable: boolean }[];
   };
   rewards: {
     quest_points: number;
-    experience: { skill: string; amount: number }[];
+    experience: { skill: Skill; amount: number }[];
     items?: string[];
     other?: string[];
   };

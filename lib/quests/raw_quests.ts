@@ -1,5 +1,6 @@
 import { Id } from './id';
 import { Name } from './name';
+import { Skill, SkillEnum } from './skill';
 import quest from './quest';
 
 const all_quests: quest[] = [
@@ -15,8 +16,8 @@ const all_quests: quest[] = [
     requirements: { quests: [], levels: [] },
     rewards: {
       experience: [
-        { skill: 'defence', amount: 500 },
-        { skill: 'hitpoints', amount: 500 },
+        { skill: Skill(SkillEnum.Defence), amount: 500 },
+        { skill: Skill(SkillEnum.Hitpoints), amount: 500 },
       ],
       quest_points: 1,
     },
@@ -45,11 +46,11 @@ const all_quests: quest[] = [
     requirements: {
       quests: ['Darkness of Hallowvale'],
       levels: [
-        { skill: 'crafting', level: 48, boostable: false },
-        { skill: 'agility', level: 45, boostable: false },
-        { skill: 'attack', level: 40, boostable: false },
-        { skill: 'herblore', level: 40, boostable: false },
-        { skill: 'slayer', level: 38, boostable: false },
+        { skill: Skill(SkillEnum.Crafting), level: 48, boostable: false },
+        { skill: Skill(SkillEnum.Agility), level: 45, boostable: false },
+        { skill: Skill(SkillEnum.Attack), level: 40, boostable: false },
+        { skill: Skill(SkillEnum.Herblore), level: 40, boostable: false },
+        { skill: Skill(SkillEnum.Slayer), level: 38, boostable: false },
       ],
     },
     rewards: { experience: [], quest_points: 1 },
@@ -66,19 +67,19 @@ const all_quests: quest[] = [
     requirements: {
       quests: ['The Restless Ghost', 'Ernest the Chicken', 'Priest in Peril'],
       levels: [
-        { skill: 'slayer', level: 18, boostable: false },
-        { skill: 'crafting', level: 19, boostable: false },
-        { skill: 'ranged', level: 30, boostable: false },
-        { skill: 'woodcutting', level: 35, boostable: false },
-        { skill: 'prayer', level: 31, boostable: false },
+        { skill: Skill(SkillEnum.Slayer), level: 18, boostable: false },
+        { skill: Skill(SkillEnum.Crafting), level: 19, boostable: false },
+        { skill: Skill(SkillEnum.Ranged), level: 30, boostable: false },
+        { skill: Skill(SkillEnum.Woodcutting), level: 35, boostable: false },
+        { skill: Skill(SkillEnum.Prayer), level: 31, boostable: false },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'crafting', amount: 1000 },
-        { skill: 'fletching', amount: 1000 },
-        { skill: 'slayer', amount: 1000 },
-        { skill: 'woodcutting', amount: 2500 },
+        { skill: Skill(SkillEnum.Crafting), amount: 1000 },
+        { skill: Skill(SkillEnum.Fletching), amount: 1000 },
+        { skill: Skill(SkillEnum.Slayer), amount: 1000 },
+        { skill: Skill(SkillEnum.Woodcutting), amount: 2500 },
       ],
       quest_points: 1,
     },
@@ -100,14 +101,14 @@ const all_quests: quest[] = [
         'Druidic Ritual',
       ],
       levels: [
-        { skill: 'attack', level: 15, boostable: false },
-        { skill: 'prayer', level: 25, boostable: false },
+        { skill: Skill(SkillEnum.Attack), level: 15, boostable: false },
+        { skill: Skill(SkillEnum.Prayer), level: 25, boostable: false },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'mining', amount: 3000 },
-        { skill: 'prayer', amount: 3000 },
+        { skill: Skill(SkillEnum.Mining), amount: 3000 },
+        { skill: Skill(SkillEnum.Prayer), amount: 3000 },
       ],
       quest_points: 1,
     },
@@ -124,16 +125,16 @@ const all_quests: quest[] = [
     requirements: {
       quests: ['Dwarf Cannon', 'Fishing Contest'],
       levels: [
-        { skill: 'defence', level: 30, boostable: false },
-        { skill: 'mining', level: 40, boostable: true },
-        { skill: 'smithing', level: 50, boostable: true },
+        { skill: Skill(SkillEnum.Defence), level: 30, boostable: false },
+        { skill: Skill(SkillEnum.Mining), level: 40, boostable: true },
+        { skill: Skill(SkillEnum.Smithing), level: 50, boostable: true },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'defence', amount: 5000 },
-        { skill: 'mining', amount: 5000 },
-        { skill: 'smithing', amount: 5000 },
+        { skill: Skill(SkillEnum.Defence), amount: 5000 },
+        { skill: Skill(SkillEnum.Mining), amount: 5000 },
+        { skill: Skill(SkillEnum.Smithing), amount: 5000 },
       ],
       quest_points: 2,
     },
@@ -150,16 +151,16 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'fletching', level: 5, boostable: false },
-        { skill: 'cooking', level: 30, boostable: false },
-        { skill: 'ranged', level: 30, boostable: false },
+        { skill: Skill(SkillEnum.Fletching), level: 5, boostable: false },
+        { skill: Skill(SkillEnum.Cooking), level: 30, boostable: false },
+        { skill: Skill(SkillEnum.Ranged), level: 30, boostable: false },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'cooking', amount: 1470 },
-        { skill: 'fletching', amount: 262 },
-        { skill: 'ranged', amount: 735 },
+        { skill: Skill(SkillEnum.Cooking), amount: 1470 },
+        { skill: Skill(SkillEnum.Fletching), amount: 262 },
+        { skill: Skill(SkillEnum.Ranged), amount: 735 },
       ],
       quest_points: 2,
     },
@@ -175,7 +176,7 @@ const all_quests: quest[] = [
     series: 'Elf',
     requirements: { quests: [], levels: [] },
     rewards: {
-      experience: [{ skill: 'thieving', amount: 1250 }],
+      experience: [{ skill: Skill(SkillEnum.Thieving), amount: 1250 }],
       quest_points: 3,
     },
   },
@@ -190,7 +191,7 @@ const all_quests: quest[] = [
     series: null,
     requirements: {
       quests: [],
-      levels: [{ skill: 'quest', level: 12, boostable: false }],
+      levels: [{ skill: Skill(SkillEnum.Quest), level: 12, boostable: false }],
     },
     rewards: { experience: [], quest_points: 3 },
   },
@@ -218,17 +219,17 @@ const all_quests: quest[] = [
     requirements: {
       quests: ["Pirate's Treasure", 'Rum Deal', 'Priest in Peril'],
       levels: [
-        { skill: 'agility', level: 42, boostable: false },
-        { skill: 'crafting', level: 45, boostable: false },
-        { skill: 'smithing', level: 50, boostable: false },
-        { skill: 'ranged', level: 40, boostable: false },
+        { skill: Skill(SkillEnum.Agility), level: 42, boostable: false },
+        { skill: Skill(SkillEnum.Crafting), level: 45, boostable: false },
+        { skill: Skill(SkillEnum.Smithing), level: 50, boostable: false },
+        { skill: Skill(SkillEnum.Ranged), level: 40, boostable: false },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'agility', amount: 7000 },
-        { skill: 'crafting', amount: 7000 },
-        { skill: 'smithing', amount: 7000 },
+        { skill: Skill(SkillEnum.Agility), amount: 7000 },
+        { skill: Skill(SkillEnum.Crafting), amount: 7000 },
+        { skill: Skill(SkillEnum.Smithing), amount: 7000 },
       ],
       quest_points: 2,
     },
@@ -269,18 +270,18 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'hunter', level: 10, boostable: false },
-        { skill: 'agility', level: 30, boostable: false },
-        { skill: 'crafting', level: 30, boostable: false },
-        { skill: 'construction', level: 34, boostable: false },
-        { skill: 'thieving', level: 15, boostable: false },
+        { skill: Skill(SkillEnum.Hunter), level: 10, boostable: false },
+        { skill: Skill(SkillEnum.Agility), level: 30, boostable: false },
+        { skill: Skill(SkillEnum.Crafting), level: 30, boostable: false },
+        { skill: Skill(SkillEnum.Construction), level: 34, boostable: false },
+        { skill: Skill(SkillEnum.Thieving), level: 15, boostable: false },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'agility', amount: 5000 },
-        { skill: 'construction', amount: 1500 },
-        { skill: 'crafting', amount: 2000 },
+        { skill: Skill(SkillEnum.Agility), amount: 5000 },
+        { skill: Skill(SkillEnum.Construction), amount: 1500 },
+        { skill: Skill(SkillEnum.Crafting), amount: 2000 },
       ],
       quest_points: 1,
     },
@@ -299,7 +300,7 @@ const all_quests: quest[] = [
       levels: [],
     },
     rewards: {
-      experience: [{ skill: 'thieving', amount: 7000 }],
+      experience: [{ skill: Skill(SkillEnum.Thieving), amount: 7000 }],
       quest_points: 1,
     },
   },
@@ -314,7 +315,7 @@ const all_quests: quest[] = [
     series: null,
     requirements: { quests: [], levels: [] },
     rewards: {
-      experience: [{ skill: 'cooking', amount: 300 }],
+      experience: [{ skill: Skill(SkillEnum.Cooking), amount: 300 }],
       quest_points: 1,
     },
   },
@@ -330,12 +331,12 @@ const all_quests: quest[] = [
     requirements: {
       quests: ['Priest in Peril', 'The Restless Ghost'],
       levels: [
-        { skill: 'crafting', level: 20, boostable: false },
-        { skill: 'thieving', level: 25, boostable: false },
+        { skill: Skill(SkillEnum.Crafting), level: 20, boostable: false },
+        { skill: Skill(SkillEnum.Thieving), level: 25, boostable: false },
       ],
     },
     rewards: {
-      experience: [{ skill: 'thieving', amount: 1000 }],
+      experience: [{ skill: Skill(SkillEnum.Thieving), amount: 1000 }],
       quest_points: 2,
     },
   },
@@ -351,20 +352,20 @@ const all_quests: quest[] = [
     requirements: {
       quests: ['In Aid of the Myreque'],
       levels: [
-        { skill: 'construction', level: 5, boostable: false },
-        { skill: 'mining', level: 20, boostable: true },
-        { skill: 'thieving', level: 22, boostable: false },
-        { skill: 'agility', level: 26, boostable: false },
-        { skill: 'crafting', level: 32, boostable: false },
-        { skill: 'magic', level: 33, boostable: false },
-        { skill: 'strength', level: 40, boostable: false },
+        { skill: Skill(SkillEnum.Construction), level: 5, boostable: false },
+        { skill: Skill(SkillEnum.Mining), level: 20, boostable: true },
+        { skill: Skill(SkillEnum.Thieving), level: 22, boostable: false },
+        { skill: Skill(SkillEnum.Agility), level: 26, boostable: false },
+        { skill: Skill(SkillEnum.Crafting), level: 32, boostable: false },
+        { skill: Skill(SkillEnum.Magic), level: 33, boostable: false },
+        { skill: Skill(SkillEnum.Strength), level: 40, boostable: false },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'agility', amount: 7000 },
-        { skill: 'construction', amount: 2000 },
-        { skill: 'thieving', amount: 6000 },
+        { skill: Skill(SkillEnum.Agility), amount: 7000 },
+        { skill: Skill(SkillEnum.Construction), amount: 2000 },
+        { skill: Skill(SkillEnum.Thieving), amount: 6000 },
       ],
       quest_points: 2,
     },
@@ -380,7 +381,7 @@ const all_quests: quest[] = [
     series: 'Troll',
     requirements: { quests: [], levels: [] },
     rewards: {
-      experience: [{ skill: 'attack', amount: 3000 }],
+      experience: [{ skill: Skill(SkillEnum.Attack), amount: 3000 }],
       quest_points: 1,
     },
   },
@@ -396,14 +397,14 @@ const all_quests: quest[] = [
     requirements: {
       quests: ['The Lost Tribe'],
       levels: [
-        { skill: 'agility', level: 23, boostable: false },
-        { skill: 'thieving', level: 23, boostable: false },
+        { skill: Skill(SkillEnum.Agility), level: 23, boostable: false },
+        { skill: Skill(SkillEnum.Thieving), level: 23, boostable: false },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'ranged', amount: 2000 },
-        { skill: 'thieving', amount: 2000 },
+        { skill: Skill(SkillEnum.Ranged), amount: 2000 },
+        { skill: Skill(SkillEnum.Thieving), amount: 2000 },
       ],
       quest_points: 1,
     },
@@ -439,14 +440,14 @@ const all_quests: quest[] = [
         'Waterfall Quest',
       ],
       levels: [
-        { skill: 'thieving', level: 53, boostable: true },
-        { skill: 'firemaking', level: 50, boostable: false },
-        { skill: 'slayer', level: 10, boostable: false },
-        { skill: 'magic', level: 50, boostable: true },
+        { skill: Skill(SkillEnum.Thieving), level: 53, boostable: true },
+        { skill: Skill(SkillEnum.Firemaking), level: 50, boostable: false },
+        { skill: Skill(SkillEnum.Slayer), level: 10, boostable: false },
+        { skill: Skill(SkillEnum.Magic), level: 50, boostable: true },
       ],
     },
     rewards: {
-      experience: [{ skill: 'magic', amount: 20000 }],
+      experience: [{ skill: Skill(SkillEnum.Magic), amount: 20000 }],
       quest_points: 3,
     },
   },
@@ -467,16 +468,16 @@ const all_quests: quest[] = [
         'Enter the Abyss',
       ],
       levels: [
-        { skill: 'smithing', level: 65, boostable: true },
-        { skill: 'runecrafting', level: 50, boostable: false },
-        { skill: 'fletching', level: 50, boostable: false },
+        { skill: Skill(SkillEnum.Smithing), level: 65, boostable: true },
+        { skill: Skill(SkillEnum.Runecraft), level: 50, boostable: false },
+        { skill: Skill(SkillEnum.Fletching), level: 50, boostable: false },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'fletching', amount: 5000 },
-        { skill: 'runecrafting', amount: 5000 },
-        { skill: 'smithing', amount: 6500 },
+        { skill: Skill(SkillEnum.Fletching), amount: 5000 },
+        { skill: Skill(SkillEnum.Runecraft), amount: 5000 },
+        { skill: Skill(SkillEnum.Smithing), amount: 6500 },
       ],
       quest_points: 1,
     },
@@ -492,10 +493,10 @@ const all_quests: quest[] = [
     series: null,
     requirements: {
       quests: [],
-      levels: [{ skill: 'mining', level: 15, boostable: false }],
+      levels: [{ skill: Skill(SkillEnum.Mining), level: 15, boostable: false }],
     },
     rewards: {
-      experience: [{ skill: 'mining', amount: 1300 }],
+      experience: [{ skill: Skill(SkillEnum.Mining), amount: 1300 }],
       quest_points: 1,
     },
   },
@@ -511,14 +512,14 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'quest', level: 32, boostable: false },
-        { skill: 'crafting', level: 8, boostable: false },
+        { skill: Skill(SkillEnum.Quest), level: 32, boostable: false },
+        { skill: Skill(SkillEnum.Crafting), level: 8, boostable: false },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'defence', amount: 18650 },
-        { skill: 'strength', amount: 18650 },
+        { skill: Skill(SkillEnum.Defence), amount: 18650 },
+        { skill: Skill(SkillEnum.Strength), amount: 18650 },
       ],
       quest_points: 2,
     },
@@ -542,14 +543,14 @@ const all_quests: quest[] = [
         'Bone Voyage',
         'Client of Kourend',
       ],
-      levels: [{ skill: 'quest', level: 200, boostable: false }],
+      levels: [{ skill: Skill(SkillEnum.Quest), level: 200, boostable: false }],
     },
     rewards: {
       experience: [
-        { skill: 'agility', amount: 15000 },
-        { skill: 'mining', amount: 18000 },
-        { skill: 'smithing', amount: 25000 },
-        { skill: 'thieving', amount: 15000 },
+        { skill: Skill(SkillEnum.Agility), amount: 15000 },
+        { skill: Skill(SkillEnum.Mining), amount: 18000 },
+        { skill: Skill(SkillEnum.Smithing), amount: 25000 },
+        { skill: Skill(SkillEnum.Thieving), amount: 15000 },
       ],
       quest_points: 5,
     },
@@ -565,12 +566,12 @@ const all_quests: quest[] = [
     series: 'Fremennik',
     requirements: {
       quests: ['Lunar Diplomacy', "Eadgar's Ruse"],
-      levels: [{ skill: 'combat', level: 85, boostable: false }],
+      levels: [{ skill: Skill(SkillEnum.Combat), level: 85, boostable: false }],
     },
     rewards: {
       experience: [
-        { skill: 'hitpoints', amount: 15000 },
-        { skill: 'magic', amount: 10000 },
+        { skill: Skill(SkillEnum.Hitpoints), amount: 15000 },
+        { skill: Skill(SkillEnum.Magic), amount: 10000 },
       ],
       quest_points: 2,
     },
@@ -586,7 +587,7 @@ const all_quests: quest[] = [
     series: null,
     requirements: { quests: [], levels: [] },
     rewards: {
-      experience: [{ skill: 'herblore', amount: 250 }],
+      experience: [{ skill: Skill(SkillEnum.Herblore), amount: 250 }],
       quest_points: 4,
     },
   },
@@ -601,7 +602,7 @@ const all_quests: quest[] = [
     series: null,
     requirements: { quests: [], levels: [] },
     rewards: {
-      experience: [{ skill: 'crafting', amount: 750 }],
+      experience: [{ skill: Skill(SkillEnum.Crafting), amount: 750 }],
       quest_points: 1,
     },
   },
@@ -617,12 +618,12 @@ const all_quests: quest[] = [
     requirements: {
       quests: ['Druidic Ritual', 'Troll Stronghold'],
       levels: [
-        { skill: 'herblore', level: 31, boostable: true },
-        { skill: 'agility', level: 44, boostable: false },
+        { skill: Skill(SkillEnum.Herblore), level: 31, boostable: true },
+        { skill: Skill(SkillEnum.Agility), level: 44, boostable: false },
       ],
     },
     rewards: {
-      experience: [{ skill: 'herblore', amount: 11000 }],
+      experience: [{ skill: Skill(SkillEnum.Herblore), amount: 11000 }],
       quest_points: 1,
     },
   },
@@ -637,10 +638,10 @@ const all_quests: quest[] = [
     series: null,
     requirements: {
       quests: [],
-      levels: [{ skill: 'hunter', level: 27, boostable: true }],
+      levels: [{ skill: Skill(SkillEnum.Hunter), level: 27, boostable: true }],
     },
     rewards: {
-      experience: [{ skill: 'hunter', amount: 2500 }],
+      experience: [{ skill: Skill(SkillEnum.Hunter), amount: 2500 }],
       quest_points: 2,
     },
   },
@@ -656,15 +657,15 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'mining', level: 20, boostable: false },
-        { skill: 'smithing', level: 20, boostable: false },
-        { skill: 'crafting', level: 20, boostable: false },
+        { skill: Skill(SkillEnum.Mining), level: 20, boostable: false },
+        { skill: Skill(SkillEnum.Smithing), level: 20, boostable: false },
+        { skill: Skill(SkillEnum.Crafting), level: 20, boostable: false },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'crafting', amount: 5000 },
-        { skill: 'smithing', amount: 5000 },
+        { skill: Skill(SkillEnum.Crafting), amount: 5000 },
+        { skill: Skill(SkillEnum.Smithing), amount: 5000 },
       ],
       quest_points: 1,
     },
@@ -681,14 +682,14 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'magic', level: 20, boostable: false },
-        { skill: 'smithing', level: 30, boostable: false },
+        { skill: Skill(SkillEnum.Magic), level: 20, boostable: false },
+        { skill: Skill(SkillEnum.Smithing), level: 30, boostable: false },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'crafting', amount: 7500 },
-        { skill: 'smithing', amount: 7500 },
+        { skill: Skill(SkillEnum.Crafting), amount: 7500 },
+        { skill: Skill(SkillEnum.Smithing), amount: 7500 },
       ],
       quest_points: 1,
     },
@@ -705,19 +706,19 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'crafting', level: 50, boostable: false },
-        { skill: 'firemaking', level: 45, boostable: false },
-        { skill: 'prayer', level: 43, boostable: false },
-        { skill: 'magic', level: 39, boostable: false },
-        { skill: 'mining', level: 45, boostable: false },
+        { skill: Skill(SkillEnum.Crafting), level: 50, boostable: false },
+        { skill: Skill(SkillEnum.Firemaking), level: 45, boostable: false },
+        { skill: Skill(SkillEnum.Prayer), level: 43, boostable: false },
+        { skill: Skill(SkillEnum.Magic), level: 39, boostable: false },
+        { skill: Skill(SkillEnum.Mining), level: 45, boostable: false },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'crafting', amount: 7000 },
-        { skill: 'firemaking', amount: 7000 },
-        { skill: 'magic', amount: 7000 },
-        { skill: 'mining', amount: 7000 },
+        { skill: Skill(SkillEnum.Crafting), amount: 7000 },
+        { skill: Skill(SkillEnum.Firemaking), amount: 7000 },
+        { skill: Skill(SkillEnum.Magic), amount: 7000 },
+        { skill: Skill(SkillEnum.Mining), amount: 7000 },
       ],
       quest_points: 2,
     },
@@ -734,18 +735,18 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'quest', level: 20, boostable: false },
-        { skill: 'firemaking', level: 20, boostable: false },
-        { skill: 'farming', level: 30, boostable: true },
-        { skill: 'crafting', level: 36, boostable: false },
+        { skill: Skill(SkillEnum.Quest), level: 20, boostable: false },
+        { skill: Skill(SkillEnum.Firemaking), level: 20, boostable: false },
+        { skill: Skill(SkillEnum.Farming), level: 30, boostable: true },
+        { skill: Skill(SkillEnum.Crafting), level: 36, boostable: false },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'crafting', amount: 2000 },
-        { skill: 'farming', amount: 3000 },
-        { skill: 'firemaking', amount: 4000 },
-        { skill: 'woodcutting', amount: 1500 },
+        { skill: Skill(SkillEnum.Crafting), amount: 2000 },
+        { skill: Skill(SkillEnum.Farming), amount: 3000 },
+        { skill: Skill(SkillEnum.Firemaking), amount: 4000 },
+        { skill: Skill(SkillEnum.Woodcutting), amount: 1500 },
       ],
       quest_points: 1,
     },
@@ -786,9 +787,9 @@ const all_quests: quest[] = [
     requirements: { quests: ['Lost City', 'Nature Spirit'], levels: [] },
     rewards: {
       experience: [
-        { skill: 'attack', amount: 2000 },
-        { skill: 'farming', amount: 3500 },
-        { skill: 'magic', amount: 1000 },
+        { skill: Skill(SkillEnum.Attack), amount: 2000 },
+        { skill: Skill(SkillEnum.Farming), amount: 3500 },
+        { skill: Skill(SkillEnum.Magic), amount: 1000 },
       ],
       quest_points: 2,
     },
@@ -805,15 +806,15 @@ const all_quests: quest[] = [
     requirements: {
       quests: ['Fairytale I - Growing Pains'],
       levels: [
-        { skill: 'thieving', level: 40, boostable: true },
-        { skill: 'farming', level: 49, boostable: true },
-        { skill: 'herblore', level: 57, boostable: true },
+        { skill: Skill(SkillEnum.Thieving), level: 40, boostable: true },
+        { skill: Skill(SkillEnum.Farming), level: 49, boostable: true },
+        { skill: Skill(SkillEnum.Herblore), level: 57, boostable: true },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'herblore', amount: 3500 },
-        { skill: 'thieving', amount: 2500 },
+        { skill: Skill(SkillEnum.Herblore), amount: 3500 },
+        { skill: Skill(SkillEnum.Thieving), amount: 2500 },
       ],
       quest_points: 2,
     },
@@ -830,10 +831,10 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'mining', level: 40, boostable: true },
-        { skill: 'smithing', level: 40, boostable: true },
-        { skill: 'magic', level: 59, boostable: true },
-        { skill: 'crafting', level: 40, boostable: false },
+        { skill: Skill(SkillEnum.Mining), level: 40, boostable: true },
+        { skill: Skill(SkillEnum.Smithing), level: 40, boostable: true },
+        { skill: Skill(SkillEnum.Magic), level: 59, boostable: true },
+        { skill: Skill(SkillEnum.Crafting), level: 40, boostable: false },
       ],
     },
     rewards: { experience: [], quest_points: 1 },
@@ -850,8 +851,8 @@ const all_quests: quest[] = [
     requirements: { quests: [], levels: [] },
     rewards: {
       experience: [
-        { skill: 'attack', amount: 12175 },
-        { skill: 'thieving', amount: 2175 },
+        { skill: Skill(SkillEnum.Attack), amount: 12175 },
+        { skill: Skill(SkillEnum.Thieving), amount: 2175 },
       ],
       quest_points: 2,
     },
@@ -867,10 +868,12 @@ const all_quests: quest[] = [
     series: 'Dwarf',
     requirements: {
       quests: [],
-      levels: [{ skill: 'fishing', level: 10, boostable: false }],
+      levels: [
+        { skill: Skill(SkillEnum.Fishing), level: 10, boostable: false },
+      ],
     },
     rewards: {
-      experience: [{ skill: 'fishing', amount: 2437 }],
+      experience: [{ skill: Skill(SkillEnum.Fishing), amount: 2437 }],
       quest_points: 1,
     },
   },
@@ -886,14 +889,14 @@ const all_quests: quest[] = [
     requirements: {
       quests: ['The Giant Dwarf', 'Fishing Contest'],
       levels: [
-        { skill: 'cooking', level: 22, boostable: false },
-        { skill: 'farming', level: 17, boostable: false },
+        { skill: Skill(SkillEnum.Cooking), level: 22, boostable: false },
+        { skill: Skill(SkillEnum.Farming), level: 17, boostable: false },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'cooking', amount: 5000 },
-        { skill: 'farming', amount: 5000 },
+        { skill: Skill(SkillEnum.Cooking), amount: 5000 },
+        { skill: Skill(SkillEnum.Farming), amount: 5000 },
       ],
       quest_points: 2,
     },
@@ -909,10 +912,12 @@ const all_quests: quest[] = [
     series: null,
     requirements: {
       quests: ['Creature of Fenkenstrain'],
-      levels: [{ skill: 'farming', level: 25, boostable: false }],
+      levels: [
+        { skill: Skill(SkillEnum.Farming), level: 25, boostable: false },
+      ],
     },
     rewards: {
-      experience: [{ skill: 'farming', amount: 5000 }],
+      experience: [{ skill: Skill(SkillEnum.Farming), amount: 5000 }],
       quest_points: 2,
     },
   },
@@ -927,7 +932,7 @@ const all_quests: quest[] = [
     series: null,
     requirements: { quests: [], levels: [] },
     rewards: {
-      experience: [{ skill: 'cooking', amount: 1525 }],
+      experience: [{ skill: Skill(SkillEnum.Cooking), amount: 1525 }],
       quest_points: 1,
     },
   },
@@ -942,7 +947,7 @@ const all_quests: quest[] = [
     series: null,
     requirements: { quests: [], levels: [] },
     rewards: {
-      experience: [{ skill: 'prayer', amount: 2400 }],
+      experience: [{ skill: Skill(SkillEnum.Prayer), amount: 2400 }],
       quest_points: 2,
     },
   },
@@ -957,7 +962,7 @@ const all_quests: quest[] = [
     series: null,
     requirements: { quests: [], levels: [] },
     rewards: {
-      experience: [{ skill: 'crafting', amount: 200 }],
+      experience: [{ skill: Skill(SkillEnum.Crafting), amount: 200 }],
       quest_points: 5,
     },
   },
@@ -973,21 +978,21 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'farming', level: 45, boostable: true },
-        { skill: 'herblore', level: 52, boostable: true },
-        { skill: 'thieving', level: 58, boostable: true },
-        { skill: 'agility', level: 59, boostable: true },
-        { skill: 'woodcutting', level: 71, boostable: true },
+        { skill: Skill(SkillEnum.Farming), level: 45, boostable: true },
+        { skill: Skill(SkillEnum.Herblore), level: 52, boostable: true },
+        { skill: Skill(SkillEnum.Thieving), level: 58, boostable: true },
+        { skill: Skill(SkillEnum.Agility), level: 59, boostable: true },
+        { skill: Skill(SkillEnum.Woodcutting), level: 71, boostable: true },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'agility', amount: 6000 },
-        { skill: 'farming', amount: 4000 },
-        { skill: 'herblore', amount: 5000 },
-        { skill: 'hitpoints', amount: 5000 },
-        { skill: 'thieving', amount: 6000 },
-        { skill: 'woodcutting', amount: 14000 },
+        { skill: Skill(SkillEnum.Agility), amount: 6000 },
+        { skill: Skill(SkillEnum.Farming), amount: 4000 },
+        { skill: Skill(SkillEnum.Herblore), amount: 5000 },
+        { skill: Skill(SkillEnum.Hitpoints), amount: 5000 },
+        { skill: Skill(SkillEnum.Thieving), amount: 6000 },
+        { skill: Skill(SkillEnum.Woodcutting), amount: 14000 },
       ],
       quest_points: 1,
     },
@@ -1004,12 +1009,12 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'agility', level: 15, boostable: false },
-        { skill: 'crafting', level: 35, boostable: false },
+        { skill: Skill(SkillEnum.Agility), level: 15, boostable: false },
+        { skill: Skill(SkillEnum.Crafting), level: 35, boostable: false },
       ],
     },
     rewards: {
-      experience: [{ skill: 'strength', amount: 22000 }],
+      experience: [{ skill: Skill(SkillEnum.Strength), amount: 22000 }],
       quest_points: 2,
     },
   },
@@ -1024,7 +1029,7 @@ const all_quests: quest[] = [
     series: 'Mahjarrat',
     requirements: { quests: [], levels: [] },
     rewards: {
-      experience: [{ skill: 'thieving', amount: 1500 }],
+      experience: [{ skill: Skill(SkillEnum.Thieving), amount: 1500 }],
       quest_points: 1,
     },
   },
@@ -1045,22 +1050,22 @@ const all_quests: quest[] = [
         'Dragon Slayer',
         'Druidic Ritual',
       ],
-      levels: [{ skill: 'quest', level: 55, boostable: false }],
+      levels: [{ skill: Skill(SkillEnum.Quest), level: 55, boostable: false }],
     },
     rewards: {
       experience: [
-        { skill: 'attack', amount: 3075 },
-        { skill: 'cooking', amount: 2825 },
-        { skill: 'defence', amount: 3075 },
-        { skill: 'firemaking', amount: 1575 },
-        { skill: 'fishing', amount: 2725 },
-        { skill: 'herblore', amount: 1325 },
-        { skill: 'hitpoints', amount: 3075 },
-        { skill: 'mining', amount: 2575 },
-        { skill: 'ranged', amount: 2075 },
-        { skill: 'smithing', amount: 2257 },
-        { skill: 'strength', amount: 3075 },
-        { skill: 'woodcutting', amount: 1575 },
+        { skill: Skill(SkillEnum.Attack), amount: 3075 },
+        { skill: Skill(SkillEnum.Cooking), amount: 2825 },
+        { skill: Skill(SkillEnum.Defence), amount: 3075 },
+        { skill: Skill(SkillEnum.Firemaking), amount: 1575 },
+        { skill: Skill(SkillEnum.Fishing), amount: 2725 },
+        { skill: Skill(SkillEnum.Herblore), amount: 1325 },
+        { skill: Skill(SkillEnum.Hitpoints), amount: 3075 },
+        { skill: Skill(SkillEnum.Mining), amount: 2575 },
+        { skill: Skill(SkillEnum.Ranged), amount: 2075 },
+        { skill: Skill(SkillEnum.Smithing), amount: 2257 },
+        { skill: Skill(SkillEnum.Strength), amount: 3075 },
+        { skill: Skill(SkillEnum.Woodcutting), amount: 1575 },
       ],
       quest_points: 1,
     },
@@ -1076,12 +1081,12 @@ const all_quests: quest[] = [
     series: 'Camelot (#2)',
     requirements: {
       quests: [],
-      levels: [{ skill: 'attack', level: 20, boostable: false }],
+      levels: [{ skill: Skill(SkillEnum.Attack), level: 20, boostable: false }],
     },
     rewards: {
       experience: [
-        { skill: 'defence', amount: 15300 },
-        { skill: 'prayer', amount: 11000 },
+        { skill: Skill(SkillEnum.Defence), amount: 15300 },
+        { skill: Skill(SkillEnum.Prayer), amount: 11000 },
       ],
       quest_points: 2,
     },
@@ -1097,13 +1102,13 @@ const all_quests: quest[] = [
     series: 'Fremennik',
     requirements: {
       quests: [],
-      levels: [{ skill: 'agility', level: 35, boostable: true }],
+      levels: [{ skill: Skill(SkillEnum.Agility), level: 35, boostable: true }],
     },
     rewards: {
       experience: [
-        { skill: 'magic', amount: 4662 },
-        { skill: 'ranged', amount: 4662.5 },
-        { skill: 'strength', amount: 4662.5 },
+        { skill: Skill(SkillEnum.Magic), amount: 4662 },
+        { skill: Skill(SkillEnum.Ranged), amount: 4662.5 },
+        { skill: Skill(SkillEnum.Strength), amount: 4662.5 },
       ],
       quest_points: 2,
     },
@@ -1120,9 +1125,9 @@ const all_quests: quest[] = [
     requirements: { quests: [], levels: [] },
     rewards: {
       experience: [
-        { skill: 'agility', amount: 4000 },
-        { skill: 'thieving', amount: 4500 },
-        { skill: 'woodcutting', amount: 4000 },
+        { skill: Skill(SkillEnum.Agility), amount: 4000 },
+        { skill: Skill(SkillEnum.Thieving), amount: 4500 },
+        { skill: Skill(SkillEnum.Woodcutting), amount: 4000 },
       ],
       quest_points: 2,
     },
@@ -1137,7 +1142,10 @@ const all_quests: quest[] = [
     length: 'Short (<5-15 minutes)',
     series: null,
     requirements: { quests: [], levels: [] },
-    rewards: { experience: [{ skill: 'magic', amount: 875 }], quest_points: 1 },
+    rewards: {
+      experience: [{ skill: Skill(SkillEnum.Magic), amount: 875 }],
+      quest_points: 1,
+    },
   },
   {
     id: Id('In-Aid-of-the-Myreque'),
@@ -1151,17 +1159,17 @@ const all_quests: quest[] = [
     requirements: {
       quests: ['In Search of the Myreque'],
       levels: [
-        { skill: 'crafting', level: 25, boostable: false },
-        { skill: 'mining', level: 15, boostable: false },
-        { skill: 'magic', level: 7, boostable: false },
+        { skill: Skill(SkillEnum.Crafting), level: 25, boostable: false },
+        { skill: Skill(SkillEnum.Mining), level: 15, boostable: false },
+        { skill: Skill(SkillEnum.Magic), level: 7, boostable: false },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'attack', amount: 2000 },
-        { skill: 'crafting', amount: 2000 },
-        { skill: 'defence', amount: 2000 },
-        { skill: 'strength', amount: 2000 },
+        { skill: Skill(SkillEnum.Attack), amount: 2000 },
+        { skill: Skill(SkillEnum.Crafting), amount: 2000 },
+        { skill: Skill(SkillEnum.Defence), amount: 2000 },
+        { skill: Skill(SkillEnum.Strength), amount: 2000 },
       ],
       quest_points: 2,
     },
@@ -1177,15 +1185,17 @@ const all_quests: quest[] = [
     series: 'Myreque',
     requirements: {
       quests: ['Nature Spirit'],
-      levels: [{ skill: 'agility', level: 25, boostable: false }],
+      levels: [
+        { skill: Skill(SkillEnum.Agility), level: 25, boostable: false },
+      ],
     },
     rewards: {
       experience: [
-        { skill: 'attack', amount: 600 },
-        { skill: 'crafting', amount: 600 },
-        { skill: 'defence', amount: 600 },
-        { skill: 'hitpoints', amount: 600 },
-        { skill: 'strength', amount: 600 },
+        { skill: Skill(SkillEnum.Attack), amount: 600 },
+        { skill: Skill(SkillEnum.Crafting), amount: 600 },
+        { skill: Skill(SkillEnum.Defence), amount: 600 },
+        { skill: Skill(SkillEnum.Hitpoints), amount: 600 },
+        { skill: Skill(SkillEnum.Strength), amount: 600 },
       ],
       quest_points: 2,
     },
@@ -1201,10 +1211,12 @@ const all_quests: quest[] = [
     series: 'Karamja',
     requirements: {
       quests: [],
-      levels: [{ skill: 'herblore', level: 3, boostable: false }],
+      levels: [
+        { skill: Skill(SkillEnum.Herblore), level: 3, boostable: false },
+      ],
     },
     rewards: {
-      experience: [{ skill: 'herblore', amount: 775 }],
+      experience: [{ skill: Skill(SkillEnum.Herblore), amount: 775 }],
       quest_points: 1,
     },
   },
@@ -1225,14 +1237,14 @@ const all_quests: quest[] = [
         'One Small Favour',
       ],
       levels: [
-        { skill: 'magic', level: 45, boostable: false },
-        { skill: 'defence', level: 65, boostable: true },
+        { skill: Skill(SkillEnum.Magic), level: 45, boostable: false },
+        { skill: Skill(SkillEnum.Defence), level: 65, boostable: true },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'defence', amount: 33000 },
-        { skill: 'magic', amount: 5000 },
+        { skill: Skill(SkillEnum.Defence), amount: 33000 },
+        { skill: Skill(SkillEnum.Magic), amount: 5000 },
       ],
       quest_points: 1,
     },
@@ -1255,17 +1267,17 @@ const all_quests: quest[] = [
         'Waterfall Quest',
       ],
       levels: [
-        { skill: 'quest', level: 107, boostable: false },
-        { skill: 'agility', level: 50, boostable: true },
-        { skill: 'crafting', level: 50, boostable: false },
-        { skill: 'herblore', level: 45, boostable: true },
-        { skill: 'magic', level: 56, boostable: false },
-        { skill: 'mining', level: 52, boostable: true },
-        { skill: 'prayer', level: 42, boostable: true },
-        { skill: 'smithing', level: 50, boostable: true },
-        { skill: 'strength', level: 50, boostable: true },
-        { skill: 'thieving', level: 50, boostable: false },
-        { skill: 'woodcutting', level: 50, boostable: true },
+        { skill: Skill(SkillEnum.Quest), level: 107, boostable: false },
+        { skill: Skill(SkillEnum.Agility), level: 50, boostable: true },
+        { skill: Skill(SkillEnum.Crafting), level: 50, boostable: false },
+        { skill: Skill(SkillEnum.Herblore), level: 45, boostable: true },
+        { skill: Skill(SkillEnum.Magic), level: 56, boostable: false },
+        { skill: Skill(SkillEnum.Mining), level: 52, boostable: true },
+        { skill: Skill(SkillEnum.Prayer), level: 42, boostable: true },
+        { skill: Skill(SkillEnum.Smithing), level: 50, boostable: true },
+        { skill: Skill(SkillEnum.Strength), level: 50, boostable: true },
+        { skill: Skill(SkillEnum.Thieving), level: 50, boostable: false },
+        { skill: Skill(SkillEnum.Woodcutting), level: 50, boostable: true },
       ],
     },
     rewards: { experience: [], quest_points: 4 },
@@ -1282,8 +1294,8 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'crafting', level: 31, boostable: false },
-        { skill: 'woodcutting', level: 36, boostable: false },
+        { skill: Skill(SkillEnum.Crafting), level: 31, boostable: false },
+        { skill: Skill(SkillEnum.Woodcutting), level: 36, boostable: false },
       ],
     },
     rewards: { experience: [], quest_points: 3 },
@@ -1305,18 +1317,18 @@ const all_quests: quest[] = [
         'Shilo Village',
       ],
       levels: [
-        { skill: 'crafting', level: 61, boostable: false },
-        { skill: 'defence', level: 40, boostable: false },
-        { skill: 'firemaking', level: 49, boostable: false },
-        { skill: 'magic', level: 65, boostable: false },
-        { skill: 'mining', level: 60, boostable: false },
-        { skill: 'woodcutting', level: 55, boostable: false },
+        { skill: Skill(SkillEnum.Crafting), level: 61, boostable: false },
+        { skill: Skill(SkillEnum.Defence), level: 40, boostable: false },
+        { skill: Skill(SkillEnum.Firemaking), level: 49, boostable: false },
+        { skill: Skill(SkillEnum.Magic), level: 65, boostable: false },
+        { skill: Skill(SkillEnum.Mining), level: 60, boostable: false },
+        { skill: Skill(SkillEnum.Woodcutting), level: 55, boostable: false },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'magic', amount: 5000 },
-        { skill: 'runecrafting', amount: 5000 },
+        { skill: Skill(SkillEnum.Magic), amount: 5000 },
+        { skill: Skill(SkillEnum.Runecraft), amount: 5000 },
       ],
       quest_points: 2,
     },
@@ -1338,18 +1350,18 @@ const all_quests: quest[] = [
         'Romeo & Juliet',
       ],
       levels: [
-        { skill: 'firemaking', level: 66, boostable: false },
-        { skill: 'mining', level: 72, boostable: false },
-        { skill: 'construction', level: 35, boostable: false },
-        { skill: 'agility', level: 68, boostable: false },
+        { skill: Skill(SkillEnum.Firemaking), level: 66, boostable: false },
+        { skill: Skill(SkillEnum.Mining), level: 72, boostable: false },
+        { skill: Skill(SkillEnum.Construction), level: 35, boostable: false },
+        { skill: Skill(SkillEnum.Agility), level: 68, boostable: false },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'agility', amount: 10000 },
-        { skill: 'construction', amount: 2000 },
-        { skill: 'firemaking', amount: 5000 },
-        { skill: 'mining', amount: 10000 },
+        { skill: Skill(SkillEnum.Agility), amount: 10000 },
+        { skill: Skill(SkillEnum.Construction), amount: 2000 },
+        { skill: Skill(SkillEnum.Firemaking), amount: 5000 },
+        { skill: Skill(SkillEnum.Mining), amount: 10000 },
       ],
       quest_points: 2,
     },
@@ -1369,8 +1381,8 @@ const all_quests: quest[] = [
     },
     rewards: {
       experience: [
-        { skill: 'crafting', amount: 1000 },
-        { skill: 'prayer', amount: 1000 },
+        { skill: Skill(SkillEnum.Crafting), amount: 1000 },
+        { skill: Skill(SkillEnum.Prayer), amount: 1000 },
       ],
       quest_points: 3,
     },
@@ -1398,7 +1410,7 @@ const all_quests: quest[] = [
     series: null,
     requirements: { quests: [], levels: [] },
     rewards: {
-      experience: [{ skill: 'crafting', amount: 600 }],
+      experience: [{ skill: Skill(SkillEnum.Crafting), amount: 600 }],
       quest_points: 1,
     },
   },
@@ -1413,7 +1425,7 @@ const all_quests: quest[] = [
     series: null,
     requirements: { quests: [], levels: [] },
     rewards: {
-      experience: [{ skill: 'woodcutting', amount: 2000 }],
+      experience: [{ skill: Skill(SkillEnum.Woodcutting), amount: 2000 }],
       quest_points: 1,
     },
   },
@@ -1428,7 +1440,7 @@ const all_quests: quest[] = [
     series: 'Gnome, Monkey',
     requirements: {
       quests: ['The Grand Tree', 'Tree Gnome Village'],
-      levels: [{ skill: 'prayer', level: 43, boostable: false }],
+      levels: [{ skill: Skill(SkillEnum.Prayer), level: 43, boostable: false }],
     },
     rewards: { experience: [], quest_points: 3 },
   },
@@ -1450,20 +1462,20 @@ const all_quests: quest[] = [
         'Watchtower',
       ],
       levels: [
-        { skill: 'slayer', level: 69, boostable: false },
-        { skill: 'crafting', level: 70, boostable: false },
-        { skill: 'hunter', level: 60, boostable: false },
-        { skill: 'agility', level: 55, boostable: false },
-        { skill: 'thieving', level: 55, boostable: false },
-        { skill: 'firemaking', level: 60, boostable: false },
+        { skill: Skill(SkillEnum.Slayer), level: 69, boostable: false },
+        { skill: Skill(SkillEnum.Crafting), level: 70, boostable: false },
+        { skill: Skill(SkillEnum.Hunter), level: 60, boostable: false },
+        { skill: Skill(SkillEnum.Agility), level: 55, boostable: false },
+        { skill: Skill(SkillEnum.Thieving), level: 55, boostable: false },
+        { skill: Skill(SkillEnum.Firemaking), level: 60, boostable: false },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'agility', amount: 20000 },
-        { skill: 'hunter', amount: 15000 },
-        { skill: 'slayer', amount: 25000 },
-        { skill: 'thieving', amount: 15000 },
+        { skill: Skill(SkillEnum.Agility), amount: 20000 },
+        { skill: Skill(SkillEnum.Hunter), amount: 15000 },
+        { skill: Skill(SkillEnum.Slayer), amount: 25000 },
+        { skill: Skill(SkillEnum.Thieving), amount: 15000 },
       ],
       quest_points: 4,
     },
@@ -1479,12 +1491,14 @@ const all_quests: quest[] = [
     series: 'Fremennik',
     requirements: {
       quests: [],
-      levels: [{ skill: 'agility', level: 20, boostable: false }],
+      levels: [
+        { skill: Skill(SkillEnum.Agility), level: 20, boostable: false },
+      ],
     },
     rewards: {
       experience: [
-        { skill: 'attack', amount: 1000 },
-        { skill: 'prayer', amount: 2000 },
+        { skill: Skill(SkillEnum.Attack), amount: 1000 },
+        { skill: Skill(SkillEnum.Prayer), amount: 2000 },
       ],
       quest_points: 2,
     },
@@ -1501,14 +1515,14 @@ const all_quests: quest[] = [
     requirements: {
       quests: ['Roving Elves', 'Big Chompy Bird Hunting', 'Sheep Herder'],
       levels: [
-        { skill: 'ranged', level: 60, boostable: true },
-        { skill: 'thieving', level: 50, boostable: true },
+        { skill: Skill(SkillEnum.Ranged), level: 60, boostable: true },
+        { skill: Skill(SkillEnum.Thieving), level: 50, boostable: true },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'hitpoints', amount: 25000 },
-        { skill: 'thieving', amount: 25000 },
+        { skill: Skill(SkillEnum.Hitpoints), amount: 25000 },
+        { skill: Skill(SkillEnum.Thieving), amount: 25000 },
       ],
       quest_points: 1,
     },
@@ -1525,12 +1539,12 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'prayer', level: 43, boostable: false },
-        { skill: 'agility', level: 60, boostable: false },
+        { skill: Skill(SkillEnum.Prayer), level: 43, boostable: false },
+        { skill: Skill(SkillEnum.Agility), level: 60, boostable: false },
       ],
     },
     rewards: {
-      experience: [{ skill: 'agility', amount: 20000 }],
+      experience: [{ skill: Skill(SkillEnum.Agility), amount: 20000 }],
       quest_points: 1,
     },
   },
@@ -1545,7 +1559,7 @@ const all_quests: quest[] = [
     series: 'Camelot',
     requirements: { quests: [], levels: [] },
     rewards: {
-      experience: [{ skill: 'crafting', amount: 1406 }],
+      experience: [{ skill: Skill(SkillEnum.Crafting), amount: 1406 }],
       quest_points: 3,
     },
   },
@@ -1561,14 +1575,14 @@ const all_quests: quest[] = [
     requirements: {
       quests: ["Eadgar's Ruse", 'The Feud', 'Jungle Potion'],
       levels: [
-        { skill: 'woodcutting', level: 10, boostable: false },
-        { skill: 'farming', level: 29, boostable: true },
+        { skill: Skill(SkillEnum.Woodcutting), level: 10, boostable: false },
+        { skill: Skill(SkillEnum.Farming), level: 29, boostable: true },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'farming', amount: 5000 },
-        { skill: 'herblore', amount: 10000 },
+        { skill: Skill(SkillEnum.Farming), amount: 5000 },
+        { skill: Skill(SkillEnum.Herblore), amount: 10000 },
       ],
       quest_points: 1,
     },
@@ -1584,13 +1598,15 @@ const all_quests: quest[] = [
     series: 'Myreque',
     requirements: {
       quests: ['Priest in Peril', 'The Restless Ghost'],
-      levels: [{ skill: 'crafting', level: 18, boostable: false }],
+      levels: [
+        { skill: Skill(SkillEnum.Crafting), level: 18, boostable: false },
+      ],
     },
     rewards: {
       experience: [
-        { skill: 'crafting', amount: 3000 },
-        { skill: 'defence', amount: 2000 },
-        { skill: 'hitpoints', amount: 2000 },
+        { skill: Skill(SkillEnum.Crafting), amount: 3000 },
+        { skill: Skill(SkillEnum.Defence), amount: 2000 },
+        { skill: Skill(SkillEnum.Hitpoints), amount: 2000 },
       ],
       quest_points: 2,
     },
@@ -1606,10 +1622,12 @@ const all_quests: quest[] = [
     series: null,
     requirements: {
       quests: [],
-      levels: [{ skill: 'crafting', level: 10, boostable: false }],
+      levels: [
+        { skill: Skill(SkillEnum.Crafting), level: 10, boostable: false },
+      ],
     },
     rewards: {
-      experience: [{ skill: 'crafting', amount: 2250 }],
+      experience: [{ skill: Skill(SkillEnum.Crafting), amount: 2250 }],
       quest_points: 2,
     },
   },
@@ -1625,12 +1643,12 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'firemaking', level: 40, boostable: false },
-        { skill: 'woodcutting', level: 50, boostable: true },
+        { skill: Skill(SkillEnum.Firemaking), level: 40, boostable: false },
+        { skill: Skill(SkillEnum.Woodcutting), level: 50, boostable: true },
       ],
     },
     rewards: {
-      experience: [{ skill: 'defence', amount: 12000 }],
+      experience: [{ skill: Skill(SkillEnum.Defence), amount: 12000 }],
       quest_points: 1,
     },
   },
@@ -1646,10 +1664,10 @@ const all_quests: quest[] = [
     requirements: {
       quests: ['Rune Mysteries', 'Shilo Village'],
       levels: [
-        { skill: 'agility', level: 36, boostable: true },
-        { skill: 'crafting', level: 25, boostable: false },
-        { skill: 'herblore', level: 18, boostable: false },
-        { skill: 'smithing', level: 30, boostable: false },
+        { skill: Skill(SkillEnum.Agility), level: 36, boostable: true },
+        { skill: Skill(SkillEnum.Crafting), level: 25, boostable: false },
+        { skill: Skill(SkillEnum.Herblore), level: 18, boostable: false },
+        { skill: Skill(SkillEnum.Smithing), level: 30, boostable: false },
       ],
     },
     rewards: { experience: [], quest_points: 2 },
@@ -1677,7 +1695,7 @@ const all_quests: quest[] = [
     series: 'Elf',
     requirements: { quests: [], levels: [] },
     rewards: {
-      experience: [{ skill: 'mining', amount: 2425 }],
+      experience: [{ skill: Skill(SkillEnum.Mining), amount: 2425 }],
       quest_points: 1,
     },
   },
@@ -1692,7 +1710,7 @@ const all_quests: quest[] = [
     series: 'Myreque',
     requirements: { quests: [], levels: [] },
     rewards: {
-      experience: [{ skill: 'prayer', amount: 1406 }],
+      experience: [{ skill: Skill(SkillEnum.Prayer), amount: 1406 }],
       quest_points: 1,
     },
   },
@@ -1720,8 +1738,8 @@ const all_quests: quest[] = [
     requirements: { quests: [], levels: [] },
     rewards: {
       experience: [
-        { skill: 'cooking', amount: 500 },
-        { skill: 'prayer', amount: 500 },
+        { skill: Skill(SkillEnum.Cooking), amount: 500 },
+        { skill: Skill(SkillEnum.Prayer), amount: 500 },
       ],
       quest_points: 1,
     },
@@ -1738,12 +1756,12 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'slayer', level: 40, boostable: false },
-        { skill: 'defence', level: 20, boostable: false },
+        { skill: Skill(SkillEnum.Slayer), level: 40, boostable: false },
+        { skill: Skill(SkillEnum.Defence), level: 20, boostable: false },
       ],
     },
     rewards: {
-      experience: [{ skill: 'prayer', amount: 5000 }],
+      experience: [{ skill: Skill(SkillEnum.Prayer), amount: 5000 }],
       quest_points: 1,
     },
   },
@@ -1758,7 +1776,7 @@ const all_quests: quest[] = [
     series: null,
     requirements: { quests: ["Icthlarin's Little Helper"], levels: [] },
     rewards: {
-      experience: [{ skill: 'thieving', amount: 4500 }],
+      experience: [{ skill: Skill(SkillEnum.Thieving), amount: 4500 }],
       quest_points: 2,
     },
   },
@@ -1788,21 +1806,21 @@ const all_quests: quest[] = [
         'Horror from the Deep',
       ],
       levels: [
-        { skill: 'quest', level: 175, boostable: false },
-        { skill: 'cooking', level: 70, boostable: true },
-        { skill: 'agility', level: 48, boostable: false },
-        { skill: 'mining', level: 50, boostable: true },
-        { skill: 'fishing', level: 53, boostable: true },
-        { skill: 'thieving', level: 53, boostable: false },
-        { skill: 'herblore', level: 25, boostable: true },
-        { skill: 'magic', level: 59, boostable: true },
-        { skill: 'smithing', level: 40, boostable: false },
-        { skill: 'firemaking', level: 50, boostable: false },
-        { skill: 'ranged', level: 40, boostable: false },
-        { skill: 'crafting', level: 40, boostable: false },
-        { skill: 'fletching', level: 10, boostable: false },
-        { skill: 'slayer', level: 10, boostable: false },
-        { skill: 'woodcutting', level: 36, boostable: false },
+        { skill: Skill(SkillEnum.Quest), level: 175, boostable: false },
+        { skill: Skill(SkillEnum.Cooking), level: 70, boostable: true },
+        { skill: Skill(SkillEnum.Agility), level: 48, boostable: false },
+        { skill: Skill(SkillEnum.Mining), level: 50, boostable: true },
+        { skill: Skill(SkillEnum.Fishing), level: 53, boostable: true },
+        { skill: Skill(SkillEnum.Thieving), level: 53, boostable: false },
+        { skill: Skill(SkillEnum.Herblore), level: 25, boostable: true },
+        { skill: Skill(SkillEnum.Magic), level: 59, boostable: true },
+        { skill: Skill(SkillEnum.Smithing), level: 40, boostable: false },
+        { skill: Skill(SkillEnum.Firemaking), level: 50, boostable: false },
+        { skill: Skill(SkillEnum.Ranged), level: 40, boostable: false },
+        { skill: Skill(SkillEnum.Crafting), level: 40, boostable: false },
+        { skill: Skill(SkillEnum.Fletching), level: 10, boostable: false },
+        { skill: Skill(SkillEnum.Slayer), level: 10, boostable: false },
+        { skill: Skill(SkillEnum.Woodcutting), level: 36, boostable: false },
       ],
     },
     rewards: { experience: [], quest_points: 10 },
@@ -1818,13 +1836,13 @@ const all_quests: quest[] = [
     series: 'Temple Knight',
     requirements: {
       quests: [],
-      levels: [{ skill: 'quest', level: 12, boostable: false }],
+      levels: [{ skill: Skill(SkillEnum.Quest), level: 12, boostable: false }],
     },
     rewards: {
       experience: [
-        { skill: 'agility', amount: 1000 },
-        { skill: 'herblore', amount: 1000 },
-        { skill: 'prayer', amount: 1000 },
+        { skill: Skill(SkillEnum.Agility), amount: 1000 },
+        { skill: Skill(SkillEnum.Herblore), amount: 1000 },
+        { skill: Skill(SkillEnum.Prayer), amount: 1000 },
       ],
       quest_points: 1,
     },
@@ -1841,12 +1859,12 @@ const all_quests: quest[] = [
     requirements: {
       quests: ['Underground Pass'],
       levels: [
-        { skill: 'agility', level: 56, boostable: true },
-        { skill: 'crafting', level: 10, boostable: false },
+        { skill: Skill(SkillEnum.Agility), level: 56, boostable: true },
+        { skill: Skill(SkillEnum.Crafting), level: 10, boostable: false },
       ],
     },
     rewards: {
-      experience: [{ skill: 'agility', amount: 13750 }],
+      experience: [{ skill: Skill(SkillEnum.Agility), amount: 13750 }],
       quest_points: 3,
     },
   },
@@ -1873,7 +1891,7 @@ const all_quests: quest[] = [
     series: 'Elf, Gnome',
     requirements: { quests: ['Regicide', 'Waterfall Quest'], levels: [] },
     rewards: {
-      experience: [{ skill: 'strength', amount: 10000 }],
+      experience: [{ skill: Skill(SkillEnum.Strength), amount: 10000 }],
       quest_points: 1,
     },
   },
@@ -1889,15 +1907,15 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'agility', level: 40, boostable: true },
-        { skill: 'slayer', level: 40, boostable: true },
+        { skill: Skill(SkillEnum.Agility), level: 40, boostable: true },
+        { skill: Skill(SkillEnum.Slayer), level: 40, boostable: true },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'agility', amount: 5000 },
-        { skill: 'hitpoints', amount: 5000 },
-        { skill: 'slayer', amount: 5000 },
+        { skill: Skill(SkillEnum.Agility), amount: 5000 },
+        { skill: Skill(SkillEnum.Hitpoints), amount: 5000 },
+        { skill: Skill(SkillEnum.Slayer), amount: 5000 },
       ],
       quest_points: 1,
     },
@@ -1914,18 +1932,18 @@ const all_quests: quest[] = [
     requirements: {
       quests: ['Zogre Flesh Eaters', 'Priest in Peril'],
       levels: [
-        { skill: 'crafting', level: 42, boostable: false },
-        { skill: 'fishing', level: 50, boostable: true },
-        { skill: 'farming', level: 40, boostable: true },
-        { skill: 'prayer', level: 47, boostable: true },
-        { skill: 'slayer', level: 42, boostable: true },
+        { skill: Skill(SkillEnum.Crafting), level: 42, boostable: false },
+        { skill: Skill(SkillEnum.Fishing), level: 50, boostable: true },
+        { skill: Skill(SkillEnum.Farming), level: 40, boostable: true },
+        { skill: Skill(SkillEnum.Prayer), level: 47, boostable: true },
+        { skill: Skill(SkillEnum.Slayer), level: 42, boostable: true },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'farming', amount: 7000 },
-        { skill: 'fishing', amount: 7000 },
-        { skill: 'prayer', amount: 7000 },
+        { skill: Skill(SkillEnum.Farming), amount: 7000 },
+        { skill: Skill(SkillEnum.Fishing), amount: 7000 },
+        { skill: Skill(SkillEnum.Prayer), amount: 7000 },
       ],
       quest_points: 2,
     },
@@ -1953,10 +1971,10 @@ const all_quests: quest[] = [
     series: null,
     requirements: {
       quests: [],
-      levels: [{ skill: 'prayer', level: 31, boostable: false }],
+      levels: [{ skill: Skill(SkillEnum.Prayer), level: 31, boostable: false }],
     },
     rewards: {
-      experience: [{ skill: 'strength', amount: 6625 }],
+      experience: [{ skill: Skill(SkillEnum.Strength), amount: 6625 }],
       quest_points: 1,
     },
   },
@@ -1971,7 +1989,7 @@ const all_quests: quest[] = [
     series: 'Sea Slug',
     requirements: { quests: [], levels: [] },
     rewards: {
-      experience: [{ skill: 'fishing', amount: 7175 }],
+      experience: [{ skill: Skill(SkillEnum.Fishing), amount: 7175 }],
       quest_points: 1,
     },
   },
@@ -1987,15 +2005,15 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'crafting', level: 20, boostable: false },
-        { skill: 'herblore', level: 15, boostable: false },
-        { skill: 'firemaking', level: 5, boostable: false },
+        { skill: Skill(SkillEnum.Crafting), level: 20, boostable: false },
+        { skill: Skill(SkillEnum.Herblore), level: 15, boostable: false },
+        { skill: Skill(SkillEnum.Firemaking), level: 5, boostable: false },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'crafting', amount: 2000 },
-        { skill: 'herblore', amount: 2000 },
+        { skill: Skill(SkillEnum.Crafting), amount: 2000 },
+        { skill: Skill(SkillEnum.Herblore), amount: 2000 },
       ],
       quest_points: 3,
     },
@@ -2035,7 +2053,7 @@ const all_quests: quest[] = [
     series: null,
     requirements: { quests: [], levels: [] },
     rewards: {
-      experience: [{ skill: 'crafting', amount: 150 }],
+      experience: [{ skill: Skill(SkillEnum.Crafting), amount: 150 }],
       quest_points: 1,
     },
   },
@@ -2063,13 +2081,13 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'crafting', level: 20, boostable: false },
-        { skill: 'agility', level: 32, boostable: true },
-        { skill: 'smithing', level: 4, boostable: false },
+        { skill: Skill(SkillEnum.Crafting), level: 20, boostable: false },
+        { skill: Skill(SkillEnum.Agility), level: 32, boostable: true },
+        { skill: Skill(SkillEnum.Smithing), level: 4, boostable: false },
       ],
     },
     rewards: {
-      experience: [{ skill: 'crafting', amount: 3875 }],
+      experience: [{ skill: Skill(SkillEnum.Crafting), amount: 3875 }],
       quest_points: 2,
     },
   },
@@ -2085,26 +2103,26 @@ const all_quests: quest[] = [
     requirements: {
       quests: ["Mourning's End Part II", 'Making History'],
       levels: [
-        { skill: 'agility', level: 70, boostable: false },
-        { skill: 'construction', level: 70, boostable: false },
-        { skill: 'farming', level: 70, boostable: false },
-        { skill: 'herblore', level: 70, boostable: false },
-        { skill: 'hunter', level: 70, boostable: false },
-        { skill: 'mining', level: 70, boostable: false },
-        { skill: 'smithing', level: 70, boostable: false },
-        { skill: 'woodcutting', level: 70, boostable: false },
+        { skill: Skill(SkillEnum.Agility), level: 70, boostable: false },
+        { skill: Skill(SkillEnum.Construction), level: 70, boostable: false },
+        { skill: Skill(SkillEnum.Farming), level: 70, boostable: false },
+        { skill: Skill(SkillEnum.Herblore), level: 70, boostable: false },
+        { skill: Skill(SkillEnum.Hunter), level: 70, boostable: false },
+        { skill: Skill(SkillEnum.Mining), level: 70, boostable: false },
+        { skill: Skill(SkillEnum.Smithing), level: 70, boostable: false },
+        { skill: Skill(SkillEnum.Woodcutting), level: 70, boostable: false },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'agility', amount: 20000 },
-        { skill: 'construction', amount: 20000 },
-        { skill: 'farming', amount: 20000 },
-        { skill: 'herblore', amount: 20000 },
-        { skill: 'hunter', amount: 20000 },
-        { skill: 'mining', amount: 20000 },
-        { skill: 'smithing', amount: 20000 },
-        { skill: 'woodcutting', amount: 20000 },
+        { skill: Skill(SkillEnum.Agility), amount: 20000 },
+        { skill: Skill(SkillEnum.Construction), amount: 20000 },
+        { skill: Skill(SkillEnum.Farming), amount: 20000 },
+        { skill: Skill(SkillEnum.Herblore), amount: 20000 },
+        { skill: Skill(SkillEnum.Hunter), amount: 20000 },
+        { skill: Skill(SkillEnum.Mining), amount: 20000 },
+        { skill: Skill(SkillEnum.Smithing), amount: 20000 },
+        { skill: Skill(SkillEnum.Woodcutting), amount: 20000 },
       ],
       quest_points: 4,
     },
@@ -2121,17 +2139,17 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'magic', level: 33, boostable: true },
-        { skill: 'ranged', level: 37, boostable: true },
-        { skill: 'mining', level: 37, boostable: false },
-        { skill: 'thieving', level: 37, boostable: true },
+        { skill: Skill(SkillEnum.Magic), level: 33, boostable: true },
+        { skill: Skill(SkillEnum.Ranged), level: 37, boostable: true },
+        { skill: Skill(SkillEnum.Mining), level: 37, boostable: false },
+        { skill: Skill(SkillEnum.Thieving), level: 37, boostable: true },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'magic', amount: 1000 },
-        { skill: 'prayer', amount: 8000 },
-        { skill: 'thieving', amount: 1000 },
+        { skill: Skill(SkillEnum.Magic), amount: 1000 },
+        { skill: Skill(SkillEnum.Prayer), amount: 8000 },
+        { skill: Skill(SkillEnum.Thieving), amount: 1000 },
       ],
       quest_points: 2,
     },
@@ -2148,20 +2166,20 @@ const all_quests: quest[] = [
     requirements: {
       quests: ['One Small Favour', 'Garden of Tranquillity'],
       levels: [
-        { skill: 'quest', level: 100, boostable: false },
-        { skill: 'magic', level: 66, boostable: true },
-        { skill: 'cooking', level: 62, boostable: true },
-        { skill: 'fishing', level: 62, boostable: true },
-        { skill: 'smithing', level: 45, boostable: true },
-        { skill: 'firemaking', level: 42, boostable: false },
-        { skill: 'crafting', level: 40, boostable: false },
+        { skill: Skill(SkillEnum.Quest), level: 100, boostable: false },
+        { skill: Skill(SkillEnum.Magic), level: 66, boostable: true },
+        { skill: Skill(SkillEnum.Cooking), level: 62, boostable: true },
+        { skill: Skill(SkillEnum.Fishing), level: 62, boostable: true },
+        { skill: Skill(SkillEnum.Smithing), level: 45, boostable: true },
+        { skill: Skill(SkillEnum.Firemaking), level: 42, boostable: false },
+        { skill: Skill(SkillEnum.Crafting), level: 40, boostable: false },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'fishing', amount: 10000 },
-        { skill: 'magic', amount: 15000 },
-        { skill: 'prayer', amount: 10000 },
+        { skill: Skill(SkillEnum.Fishing), amount: 10000 },
+        { skill: Skill(SkillEnum.Magic), amount: 15000 },
+        { skill: Skill(SkillEnum.Prayer), amount: 10000 },
       ],
       quest_points: 2,
     },
@@ -2178,17 +2196,17 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'agility', level: 15, boostable: false },
-        { skill: 'cooking', level: 30, boostable: false },
-        { skill: 'fishing', level: 5, boostable: false },
+        { skill: Skill(SkillEnum.Agility), level: 15, boostable: false },
+        { skill: Skill(SkillEnum.Cooking), level: 30, boostable: false },
+        { skill: Skill(SkillEnum.Fishing), level: 5, boostable: false },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'attack', amount: 2500 },
-        { skill: 'cooking', amount: 5000 },
-        { skill: 'fishing', amount: 5000 },
-        { skill: 'strength', amount: 2500 },
+        { skill: Skill(SkillEnum.Attack), amount: 2500 },
+        { skill: Skill(SkillEnum.Cooking), amount: 5000 },
+        { skill: Skill(SkillEnum.Fishing), amount: 5000 },
+        { skill: Skill(SkillEnum.Strength), amount: 2500 },
       ],
       quest_points: 2,
     },
@@ -2205,8 +2223,8 @@ const all_quests: quest[] = [
     requirements: {
       quests: ['Client of Kourend'],
       levels: [
-        { skill: 'strength', level: 16, boostable: false },
-        { skill: 'mining', level: 10, boostable: false },
+        { skill: Skill(SkillEnum.Strength), level: 16, boostable: false },
+        { skill: Skill(SkillEnum.Mining), level: 10, boostable: false },
       ],
     },
     rewards: { experience: [], quest_points: 1 },
@@ -2223,14 +2241,14 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'quest', level: 43, boostable: false },
-        { skill: 'firemaking', level: 49, boostable: false },
-        { skill: 'crafting', level: 20, boostable: false },
-        { skill: 'mining', level: 20, boostable: false },
+        { skill: Skill(SkillEnum.Quest), level: 43, boostable: false },
+        { skill: Skill(SkillEnum.Firemaking), level: 49, boostable: false },
+        { skill: Skill(SkillEnum.Crafting), level: 20, boostable: false },
+        { skill: Skill(SkillEnum.Mining), level: 20, boostable: false },
       ],
     },
     rewards: {
-      experience: [{ skill: 'crafting', amount: 1000 }],
+      experience: [{ skill: Skill(SkillEnum.Crafting), amount: 1000 }],
       quest_points: 1,
     },
   },
@@ -2246,14 +2264,14 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'thieving', level: 42, boostable: true },
-        { skill: 'ranged', level: 40, boostable: false },
+        { skill: Skill(SkillEnum.Thieving), level: 42, boostable: true },
+        { skill: Skill(SkillEnum.Ranged), level: 40, boostable: false },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'fletching', amount: 8000 },
-        { skill: 'ranged', amount: 10500 },
+        { skill: Skill(SkillEnum.Fletching), amount: 8000 },
+        { skill: Skill(SkillEnum.Ranged), amount: 10500 },
       ],
       quest_points: 1,
     },
@@ -2269,12 +2287,12 @@ const all_quests: quest[] = [
     series: 'Great Kourend',
     requirements: {
       quests: ['Client of Kourend'],
-      levels: [{ skill: 'hunter', level: 12, boostable: false }],
+      levels: [{ skill: Skill(SkillEnum.Hunter), level: 12, boostable: false }],
     },
     rewards: {
       experience: [
-        { skill: 'hunter', amount: 1500 },
-        { skill: 'runecrafting', amount: 500 },
+        { skill: Skill(SkillEnum.Hunter), amount: 1500 },
+        { skill: Skill(SkillEnum.Runecraft), amount: 500 },
       ],
       quest_points: 1,
     },
@@ -2302,10 +2320,12 @@ const all_quests: quest[] = [
     series: 'Great Kourend',
     requirements: {
       quests: ['Client of Kourend'],
-      levels: [{ skill: 'agility', level: 18, boostable: false }],
+      levels: [
+        { skill: Skill(SkillEnum.Agility), level: 18, boostable: false },
+      ],
     },
     rewards: {
-      experience: [{ skill: 'agility', amount: 1500 }],
+      experience: [{ skill: Skill(SkillEnum.Agility), amount: 1500 }],
       quest_points: 1,
     },
   },
@@ -2321,15 +2341,15 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'agility', level: 10, boostable: false },
-        { skill: 'herblore', level: 10, boostable: false },
-        { skill: 'thieving', level: 25, boostable: false },
+        { skill: Skill(SkillEnum.Agility), level: 10, boostable: false },
+        { skill: Skill(SkillEnum.Herblore), level: 10, boostable: false },
+        { skill: Skill(SkillEnum.Thieving), level: 25, boostable: false },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'herblore', amount: 2000 },
-        { skill: 'mining', amount: 15300 },
+        { skill: Skill(SkillEnum.Herblore), amount: 2000 },
+        { skill: Skill(SkillEnum.Mining), amount: 15300 },
       ],
       quest_points: 2,
     },
@@ -2346,16 +2366,16 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'construction', level: 5, boostable: false },
-        { skill: 'magic', level: 46, boostable: true },
+        { skill: Skill(SkillEnum.Construction), level: 5, boostable: false },
+        { skill: Skill(SkillEnum.Magic), level: 46, boostable: true },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'construction', amount: 250 },
-        { skill: 'magic', amount: 12000 },
-        { skill: 'runecrafting', amount: 6000 },
-        { skill: 'woodcutting', amount: 2500 },
+        { skill: Skill(SkillEnum.Construction), amount: 250 },
+        { skill: Skill(SkillEnum.Magic), amount: 12000 },
+        { skill: Skill(SkillEnum.Runecraft), amount: 6000 },
+        { skill: Skill(SkillEnum.Woodcutting), amount: 2500 },
       ],
       quest_points: 2,
     },
@@ -2371,10 +2391,12 @@ const all_quests: quest[] = [
     series: 'Desert',
     requirements: {
       quests: [],
-      levels: [{ skill: 'thieving', level: 30, boostable: true }],
+      levels: [
+        { skill: Skill(SkillEnum.Thieving), level: 30, boostable: true },
+      ],
     },
     rewards: {
-      experience: [{ skill: 'thieving', amount: 15000 }],
+      experience: [{ skill: Skill(SkillEnum.Thieving), amount: 15000 }],
       quest_points: 1,
     },
   },
@@ -2390,8 +2412,8 @@ const all_quests: quest[] = [
     requirements: { quests: [], levels: [] },
     rewards: {
       experience: [
-        { skill: 'mining', amount: 500 },
-        { skill: 'smithing', amount: 500 },
+        { skill: Skill(SkillEnum.Mining), amount: 500 },
+        { skill: Skill(SkillEnum.Smithing), amount: 500 },
       ],
       quest_points: 1,
     },
@@ -2413,18 +2435,18 @@ const all_quests: quest[] = [
         "Heroes' Quest",
       ],
       levels: [
-        { skill: 'crafting', level: 65, boostable: false },
-        { skill: 'slayer', level: 60, boostable: false },
-        { skill: 'smithing', level: 60, boostable: false },
-        { skill: 'fishing', level: 60, boostable: false },
-        { skill: 'runecrafting', level: 55, boostable: false },
+        { skill: Skill(SkillEnum.Crafting), level: 65, boostable: false },
+        { skill: Skill(SkillEnum.Slayer), level: 60, boostable: false },
+        { skill: Skill(SkillEnum.Smithing), level: 60, boostable: false },
+        { skill: Skill(SkillEnum.Fishing), level: 60, boostable: false },
+        { skill: Skill(SkillEnum.Runecraft), level: 55, boostable: false },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'crafting', amount: 15000 },
-        { skill: 'runecrafting', amount: 5000 },
-        { skill: 'slayer', amount: 15000 },
+        { skill: Skill(SkillEnum.Crafting), amount: 15000 },
+        { skill: Skill(SkillEnum.Runecraft), amount: 5000 },
+        { skill: Skill(SkillEnum.Slayer), amount: 15000 },
       ],
       quest_points: 2,
     },
@@ -2441,15 +2463,15 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'construction', level: 20, boostable: false },
-        { skill: 'agility', level: 40, boostable: true },
+        { skill: Skill(SkillEnum.Construction), level: 20, boostable: false },
+        { skill: Skill(SkillEnum.Agility), level: 40, boostable: true },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'construction', amount: 5000 },
-        { skill: 'crafting', amount: 5000 },
-        { skill: 'woodcutting', amount: 10000 },
+        { skill: Skill(SkillEnum.Construction), amount: 5000 },
+        { skill: Skill(SkillEnum.Crafting), amount: 5000 },
+        { skill: Skill(SkillEnum.Woodcutting), amount: 10000 },
       ],
       quest_points: 1,
     },
@@ -2466,16 +2488,16 @@ const all_quests: quest[] = [
     requirements: { quests: [], levels: [] },
     rewards: {
       experience: [
-        { skill: 'agility', amount: 2812 },
-        { skill: 'attack', amount: 2812 },
-        { skill: 'crafting', amount: 2812 },
-        { skill: 'defence', amount: 2812 },
-        { skill: 'fishing', amount: 2812 },
-        { skill: 'fletching', amount: 2812 },
-        { skill: 'hitpoints', amount: 2812 },
-        { skill: 'strength', amount: 2812 },
-        { skill: 'thieving', amount: 2812 },
-        { skill: 'woodcutting', amount: 2812 },
+        { skill: Skill(SkillEnum.Agility), amount: 2812 },
+        { skill: Skill(SkillEnum.Attack), amount: 2812 },
+        { skill: Skill(SkillEnum.Crafting), amount: 2812 },
+        { skill: Skill(SkillEnum.Defence), amount: 2812 },
+        { skill: Skill(SkillEnum.Fishing), amount: 2812 },
+        { skill: Skill(SkillEnum.Fletching), amount: 2812 },
+        { skill: Skill(SkillEnum.Hitpoints), amount: 2812 },
+        { skill: Skill(SkillEnum.Strength), amount: 2812 },
+        { skill: Skill(SkillEnum.Thieving), amount: 2812 },
+        { skill: Skill(SkillEnum.Woodcutting), amount: 2812 },
       ],
       quest_points: 3,
     },
@@ -2492,22 +2514,22 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'crafting', level: 12, boostable: false },
-        { skill: 'firemaking', level: 16, boostable: false },
-        { skill: 'magic', level: 33, boostable: false },
-        { skill: 'thieving', level: 14, boostable: false },
-        { skill: 'mining', level: 20, boostable: false },
-        { skill: 'smithing', level: 20, boostable: false },
+        { skill: Skill(SkillEnum.Crafting), level: 12, boostable: false },
+        { skill: Skill(SkillEnum.Firemaking), level: 16, boostable: false },
+        { skill: Skill(SkillEnum.Magic), level: 33, boostable: false },
+        { skill: Skill(SkillEnum.Thieving), level: 14, boostable: false },
+        { skill: Skill(SkillEnum.Mining), level: 20, boostable: false },
+        { skill: Skill(SkillEnum.Smithing), level: 20, boostable: false },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'crafting', amount: 2500 },
-        { skill: 'firemaking', amount: 1500 },
-        { skill: 'magic', amount: 1500 },
-        { skill: 'mining', amount: 2500 },
-        { skill: 'smithing', amount: 2500 },
-        { skill: 'thieving', amount: 1500 },
+        { skill: Skill(SkillEnum.Crafting), amount: 2500 },
+        { skill: Skill(SkillEnum.Firemaking), amount: 1500 },
+        { skill: Skill(SkillEnum.Magic), amount: 1500 },
+        { skill: Skill(SkillEnum.Mining), amount: 2500 },
+        { skill: Skill(SkillEnum.Smithing), amount: 2500 },
+        { skill: Skill(SkillEnum.Thieving), amount: 1500 },
       ],
       quest_points: 2,
     },
@@ -2524,14 +2546,14 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'crafting', level: 20, boostable: false },
-        { skill: 'thieving', level: 25, boostable: false },
+        { skill: Skill(SkillEnum.Crafting), level: 20, boostable: false },
+        { skill: Skill(SkillEnum.Thieving), level: 25, boostable: false },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'crafting', amount: 1000 },
-        { skill: 'thieving', amount: 1000 },
+        { skill: Skill(SkillEnum.Crafting), amount: 1000 },
+        { skill: Skill(SkillEnum.Thieving), amount: 1000 },
       ],
       quest_points: 1,
     },
@@ -2547,13 +2569,15 @@ const all_quests: quest[] = [
     series: 'Gnome',
     requirements: {
       quests: [],
-      levels: [{ skill: 'agility', level: 25, boostable: false }],
+      levels: [
+        { skill: Skill(SkillEnum.Agility), level: 25, boostable: false },
+      ],
     },
     rewards: {
       experience: [
-        { skill: 'agility', amount: 7900 },
-        { skill: 'attack', amount: 18400 },
-        { skill: 'magic', amount: 2150 },
+        { skill: Skill(SkillEnum.Agility), amount: 7900 },
+        { skill: Skill(SkillEnum.Attack), amount: 18400 },
+        { skill: Skill(SkillEnum.Magic), amount: 2150 },
       ],
       quest_points: 5,
     },
@@ -2574,16 +2598,16 @@ const all_quests: quest[] = [
         'Pirate Pete subquest of Recipe for Disaster',
       ],
       levels: [
-        { skill: 'crafting', level: 16, boostable: false },
-        { skill: 'construction', level: 30, boostable: false },
-        { skill: 'prayer', level: 50, boostable: true },
+        { skill: Skill(SkillEnum.Crafting), level: 16, boostable: false },
+        { skill: Skill(SkillEnum.Construction), level: 30, boostable: false },
+        { skill: Skill(SkillEnum.Prayer), level: 50, boostable: true },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'construction', amount: 2000 },
-        { skill: 'crafting', amount: 3000 },
-        { skill: 'prayer', amount: 6000 },
+        { skill: Skill(SkillEnum.Construction), amount: 2000 },
+        { skill: Skill(SkillEnum.Crafting), amount: 3000 },
+        { skill: Skill(SkillEnum.Prayer), amount: 6000 },
       ],
       quest_points: 2,
     },
@@ -2600,8 +2624,8 @@ const all_quests: quest[] = [
     requirements: { quests: [], levels: [] },
     rewards: {
       experience: [
-        { skill: 'crafting', amount: 9000 },
-        { skill: 'thieving', amount: 1000 },
+        { skill: Skill(SkillEnum.Crafting), amount: 9000 },
+        { skill: Skill(SkillEnum.Thieving), amount: 1000 },
       ],
       quest_points: 1,
     },
@@ -2617,10 +2641,10 @@ const all_quests: quest[] = [
     series: null,
     requirements: {
       quests: [],
-      levels: [{ skill: 'mining', level: 10, boostable: false }],
+      levels: [{ skill: Skill(SkillEnum.Mining), level: 10, boostable: false }],
     },
     rewards: {
-      experience: [{ skill: 'smithing', amount: 12725 }],
+      experience: [{ skill: Skill(SkillEnum.Smithing), amount: 12725 }],
       quest_points: 1,
     },
   },
@@ -2636,13 +2660,13 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'agility', level: 13, boostable: false },
-        { skill: 'thieving', level: 13, boostable: false },
-        { skill: 'mining', level: 17, boostable: false },
+        { skill: Skill(SkillEnum.Agility), level: 13, boostable: false },
+        { skill: Skill(SkillEnum.Thieving), level: 13, boostable: false },
+        { skill: Skill(SkillEnum.Mining), level: 17, boostable: false },
       ],
     },
     rewards: {
-      experience: [{ skill: 'mining', amount: 3000 }],
+      experience: [{ skill: Skill(SkillEnum.Mining), amount: 3000 }],
       quest_points: 1,
     },
   },
@@ -2657,10 +2681,12 @@ const all_quests: quest[] = [
     series: 'Great Kourend',
     requirements: {
       quests: ['Client of Kourend'],
-      levels: [{ skill: 'thieving', level: 20, boostable: false }],
+      levels: [
+        { skill: Skill(SkillEnum.Thieving), level: 20, boostable: false },
+      ],
     },
     rewards: {
-      experience: [{ skill: 'thieving', amount: 2000 }],
+      experience: [{ skill: Skill(SkillEnum.Thieving), amount: 2000 }],
       quest_points: 1,
     },
   },
@@ -2675,7 +2701,7 @@ const all_quests: quest[] = [
     series: null,
     requirements: { quests: [], levels: [] },
     rewards: {
-      experience: [{ skill: 'prayer', amount: 1125 }],
+      experience: [{ skill: Skill(SkillEnum.Prayer), amount: 1125 }],
       quest_points: 1,
     },
   },
@@ -2700,13 +2726,13 @@ const all_quests: quest[] = [
         'The Restless Ghost',
       ],
       levels: [
-        { skill: 'woodcutting', level: 62, boostable: false },
-        { skill: 'fletching', level: 60, boostable: false },
-        { skill: 'crafting', level: 56, boostable: false },
-        { skill: 'agility', level: 52, boostable: false },
-        { skill: 'attack', level: 50, boostable: false },
-        { skill: 'slayer', level: 50, boostable: false },
-        { skill: 'magic', level: 49, boostable: false },
+        { skill: Skill(SkillEnum.Woodcutting), level: 62, boostable: false },
+        { skill: Skill(SkillEnum.Fletching), level: 60, boostable: false },
+        { skill: Skill(SkillEnum.Crafting), level: 56, boostable: false },
+        { skill: Skill(SkillEnum.Agility), level: 52, boostable: false },
+        { skill: Skill(SkillEnum.Attack), level: 50, boostable: false },
+        { skill: Skill(SkillEnum.Slayer), level: 50, boostable: false },
+        { skill: Skill(SkillEnum.Magic), level: 49, boostable: false },
       ],
     },
     rewards: {
@@ -2733,17 +2759,17 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'crafting', level: 30, boostable: false },
-        { skill: 'runecrafting', level: 30, boostable: true },
-        { skill: 'slayer', level: 30, boostable: true },
-        { skill: 'thieving', level: 30, boostable: true },
+        { skill: Skill(SkillEnum.Crafting), level: 30, boostable: false },
+        { skill: Skill(SkillEnum.Runecraft), level: 30, boostable: true },
+        { skill: Skill(SkillEnum.Slayer), level: 30, boostable: true },
+        { skill: Skill(SkillEnum.Thieving), level: 30, boostable: true },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'crafting', amount: 3500 },
-        { skill: 'runecrafting', amount: 3500 },
-        { skill: 'thieving', amount: 3500 },
+        { skill: Skill(SkillEnum.Crafting), amount: 3500 },
+        { skill: Skill(SkillEnum.Runecraft), amount: 3500 },
+        { skill: Skill(SkillEnum.Thieving), amount: 3500 },
       ],
       quest_points: 1,
     },
@@ -2760,8 +2786,8 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'fletching', level: 10, boostable: false },
-        { skill: 'smithing', level: 20, boostable: false },
+        { skill: Skill(SkillEnum.Fletching), level: 10, boostable: false },
+        { skill: Skill(SkillEnum.Smithing), level: 20, boostable: false },
       ],
     },
     rewards: { experience: [], quest_points: 2 },
@@ -2778,10 +2804,10 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'woodcutting', level: 45, boostable: false },
-        { skill: 'farming', level: 10, boostable: false },
-        { skill: 'mining', level: 30, boostable: false },
-        { skill: 'fishing', level: 35, boostable: false },
+        { skill: Skill(SkillEnum.Woodcutting), level: 45, boostable: false },
+        { skill: Skill(SkillEnum.Farming), level: 10, boostable: false },
+        { skill: Skill(SkillEnum.Mining), level: 30, boostable: false },
+        { skill: Skill(SkillEnum.Fishing), level: 35, boostable: false },
       ],
     },
     rewards: { experience: [], quest_points: 1 },
@@ -2797,13 +2823,15 @@ const all_quests: quest[] = [
     series: null,
     requirements: {
       quests: [],
-      levels: [{ skill: 'construction', level: 10, boostable: false }],
+      levels: [
+        { skill: Skill(SkillEnum.Construction), level: 10, boostable: false },
+      ],
     },
     rewards: {
       experience: [
-        { skill: 'construction', amount: 1000 },
-        { skill: 'crafting', amount: 500 },
-        { skill: 'thieving', amount: 500 },
+        { skill: Skill(SkillEnum.Construction), amount: 1000 },
+        { skill: Skill(SkillEnum.Crafting), amount: 500 },
+        { skill: Skill(SkillEnum.Thieving), amount: 500 },
       ],
       quest_points: 2,
     },
@@ -2819,7 +2847,7 @@ const all_quests: quest[] = [
     series: 'Gnome',
     requirements: { quests: [], levels: [] },
     rewards: {
-      experience: [{ skill: 'attack', amount: 11450 }],
+      experience: [{ skill: Skill(SkillEnum.Attack), amount: 11450 }],
       quest_points: 2,
     },
   },
@@ -2834,10 +2862,12 @@ const all_quests: quest[] = [
     series: null,
     requirements: {
       quests: [],
-      levels: [{ skill: 'thieving', level: 21, boostable: false }],
+      levels: [
+        { skill: Skill(SkillEnum.Thieving), level: 21, boostable: false },
+      ],
     },
     rewards: {
-      experience: [{ skill: 'thieving', amount: 1775 }],
+      experience: [{ skill: Skill(SkillEnum.Thieving), amount: 1775 }],
       quest_points: 1,
     },
   },
@@ -2853,8 +2883,8 @@ const all_quests: quest[] = [
     requirements: { quests: ['Troll Stronghold'], levels: [] },
     rewards: {
       experience: [
-        { skill: 'agility', amount: 8000 },
-        { skill: 'strength', amount: 4000 },
+        { skill: Skill(SkillEnum.Agility), amount: 8000 },
+        { skill: Skill(SkillEnum.Strength), amount: 4000 },
       ],
       quest_points: 2,
     },
@@ -2870,7 +2900,9 @@ const all_quests: quest[] = [
     series: 'Troll',
     requirements: {
       quests: [],
-      levels: [{ skill: 'agility', level: 15, boostable: false }],
+      levels: [
+        { skill: Skill(SkillEnum.Agility), level: 15, boostable: false },
+      ],
     },
     rewards: { experience: [], quest_points: 1 },
   },
@@ -2885,12 +2917,12 @@ const all_quests: quest[] = [
     series: 'Elf',
     requirements: {
       quests: ['Biohazard'],
-      levels: [{ skill: 'ranged', level: 25, boostable: false }],
+      levels: [{ skill: Skill(SkillEnum.Ranged), level: 25, boostable: false }],
     },
     rewards: {
       experience: [
-        { skill: 'agility', amount: 3000 },
-        { skill: 'attack', amount: 3000 },
+        { skill: Skill(SkillEnum.Agility), amount: 3000 },
+        { skill: Skill(SkillEnum.Attack), amount: 3000 },
       ],
       quest_points: 5,
     },
@@ -2906,7 +2938,7 @@ const all_quests: quest[] = [
     series: null,
     requirements: { quests: [], levels: [] },
     rewards: {
-      experience: [{ skill: 'attack', amount: 4825 }],
+      experience: [{ skill: Skill(SkillEnum.Attack), amount: 4825 }],
       quest_points: 3,
     },
   },
@@ -2926,10 +2958,10 @@ const all_quests: quest[] = [
         'The Lost Tribe',
         'Priest in Peril',
       ],
-      levels: [{ skill: 'quest', level: 32, boostable: false }],
+      levels: [{ skill: Skill(SkillEnum.Quest), level: 32, boostable: false }],
     },
     rewards: {
-      experience: [{ skill: 'slayer', amount: 5000 }],
+      experience: [{ skill: Skill(SkillEnum.Slayer), amount: 5000 }],
       quest_points: 1,
     },
   },
@@ -2945,15 +2977,15 @@ const all_quests: quest[] = [
     requirements: {
       quests: [],
       levels: [
-        { skill: 'magic', level: 15, boostable: false },
-        { skill: 'thieving', level: 15, boostable: false },
-        { skill: 'agility', level: 25, boostable: false },
-        { skill: 'herblore', level: 14, boostable: false },
-        { skill: 'mining', level: 40, boostable: false },
+        { skill: Skill(SkillEnum.Magic), level: 15, boostable: false },
+        { skill: Skill(SkillEnum.Thieving), level: 15, boostable: false },
+        { skill: Skill(SkillEnum.Agility), level: 25, boostable: false },
+        { skill: Skill(SkillEnum.Herblore), level: 14, boostable: false },
+        { skill: Skill(SkillEnum.Mining), level: 40, boostable: false },
       ],
     },
     rewards: {
-      experience: [{ skill: 'magic', amount: 15250 }],
+      experience: [{ skill: Skill(SkillEnum.Magic), amount: 15250 }],
       quest_points: 4,
     },
   },
@@ -2969,8 +3001,8 @@ const all_quests: quest[] = [
     requirements: { quests: [], levels: [] },
     rewards: {
       experience: [
-        { skill: 'attack', amount: 13750 },
-        { skill: 'strength', amount: 13750 },
+        { skill: Skill(SkillEnum.Attack), amount: 13750 },
+        { skill: Skill(SkillEnum.Strength), amount: 13750 },
       ],
       quest_points: 1,
     },
@@ -2987,8 +3019,8 @@ const all_quests: quest[] = [
     requirements: { quests: [], levels: [] },
     rewards: {
       experience: [
-        { skill: 'defence', amount: 2000 },
-        { skill: 'runecrafting', amount: 8000 },
+        { skill: Skill(SkillEnum.Defence), amount: 2000 },
+        { skill: Skill(SkillEnum.Runecraft), amount: 8000 },
       ],
       quest_points: 1,
     },
@@ -3004,7 +3036,7 @@ const all_quests: quest[] = [
     series: null,
     requirements: { quests: [], levels: [] },
     rewards: {
-      experience: [{ skill: 'hitpoints', amount: 6325 }],
+      experience: [{ skill: Skill(SkillEnum.Hitpoints), amount: 6325 }],
       quest_points: 4,
     },
   },
@@ -3018,7 +3050,10 @@ const all_quests: quest[] = [
     length: 'Short (<5 minutes)',
     series: null,
     requirements: { quests: [], levels: [] },
-    rewards: { experience: [{ skill: 'magic', amount: 325 }], quest_points: 1 },
+    rewards: {
+      experience: [{ skill: Skill(SkillEnum.Magic), amount: 325 }],
+      quest_points: 1,
+    },
   },
   {
     id: Id('X-Marks-the-Spot'),
@@ -3052,19 +3087,19 @@ const all_quests: quest[] = [
     requirements: {
       quests: ['Big Chompy Bird Hunting', 'Jungle Potion'],
       levels: [
-        { skill: 'smithing', level: 4, boostable: false },
-        { skill: 'herblore', level: 8, boostable: false },
-        { skill: 'ranged', level: 30, boostable: false },
-        { skill: 'fletching', level: 30, boostable: false },
-        { skill: 'strength', level: 10, boostable: false },
-        { skill: 'prayer', level: 43, boostable: false },
+        { skill: Skill(SkillEnum.Smithing), level: 4, boostable: false },
+        { skill: Skill(SkillEnum.Herblore), level: 8, boostable: false },
+        { skill: Skill(SkillEnum.Ranged), level: 30, boostable: false },
+        { skill: Skill(SkillEnum.Fletching), level: 30, boostable: false },
+        { skill: Skill(SkillEnum.Strength), level: 10, boostable: false },
+        { skill: Skill(SkillEnum.Prayer), level: 43, boostable: false },
       ],
     },
     rewards: {
       experience: [
-        { skill: 'fletching', amount: 2000 },
-        { skill: 'herblore', amount: 2000 },
-        { skill: 'ranged', amount: 2000 },
+        { skill: Skill(SkillEnum.Fletching), amount: 2000 },
+        { skill: Skill(SkillEnum.Herblore), amount: 2000 },
+        { skill: Skill(SkillEnum.Ranged), amount: 2000 },
       ],
       quest_points: 1,
     },
