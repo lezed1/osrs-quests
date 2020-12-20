@@ -2,6 +2,8 @@
 
 OSRS Quests is a website that provides information on OSRS quests. This information is scraped from the OSRS Wiki and links back to the wiki.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e64c45b5-f543-47e7-9757-71e98ad92b4e/deploy-status)](https://app.netlify.com/sites/osrs-quests/deploys)
+
 ## Usage
 
 ### Getting started
