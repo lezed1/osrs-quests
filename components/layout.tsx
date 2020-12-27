@@ -26,6 +26,14 @@ export default function Layout({ children }) {
                 Quest Info
               </Link>
             </li>
+            <li>
+              <Link
+                href={`/api/login`}
+                // activeClassName="is-active"
+              >
+                Log in
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
