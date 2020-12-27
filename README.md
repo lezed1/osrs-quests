@@ -34,10 +34,10 @@ yarn run prettier-watch
 
 This will use Prettier to style any files that have changed.
 
-### Check build
+### Build
 
-To check that the site builds, use:
+To build the site, use:
 
 ```bash
-yarn run check-build
+yarn run build
 ```
