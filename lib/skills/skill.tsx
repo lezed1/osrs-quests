@@ -1,5 +1,5 @@
 import { Brand, make } from 'ts-brand';
-import { QuestTypeBrand } from './brand';
+import { SkillTypeBrand } from './brand';
 
 export enum SkillEnum {
   // Free to play
@@ -33,10 +33,12 @@ export enum SkillEnum {
   Combat = 'Combat',
   Quest_points = 'Quest points',
 }
-export type Skill = Brand<SkillEnum, 'id', QuestTypeBrand>;
+export type Skill = Brand<SkillEnum, 'id', SkillTypeBrand>;
 export const Skill = make<Skill>();
 
-export const iconPath = (skill: Skill) => `/skill-icons/${skill}_icon.png`;
+export const iconPath = (skill: Skill) => {
+  return `/skill-icons/${skill.replace(' ', '_')}_icon.png`;
+};
 export const render = (skill: Skill) => (
   <span>
     <style jsx>{`

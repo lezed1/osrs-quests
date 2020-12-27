@@ -1,8 +1,33 @@
 import React from 'react';
 import Link from 'next/link';
 import * as QuestPage from '../pages/quests';
+import { useFetchUser } from '../lib/accounts/user';
 
-export default function Layout({ children }) {
+const AccountLinks = () => {
+  const { user, loading } = useFetchUser();
+
+  if (loading) {
+    return <li className="menu-text">Loading login info...</li>;
+  }
+  if (null == user) {
+    return (
+      <li>
+        <Link href={`/api/login`}>Log in</Link>
+      </li>
+    );
+  } else {
+    return (
+      <>
+        <li className="menu-text">Logged in as {user.name}</li>
+        <li>
+          <Link href={`/api/logout`}>Log out</Link>
+        </li>
+      </>
+    );
+  }
+};
+
+const Layout = ({ children }) => {
   return (
     <div>
       <div className="top-bar">
@@ -26,14 +51,11 @@ export default function Layout({ children }) {
                 Quest Info
               </Link>
             </li>
-            <li>
-              <Link
-                href={`/api/login`}
-                // activeClassName="is-active"
-              >
-                Log in
-              </Link>
-            </li>
+          </ul>
+        </div>
+        <div className="top-bar-right">
+          <ul className="menu">
+            <AccountLinks />
           </ul>
         </div>
       </div>
@@ -42,4 +64,5 @@ export default function Layout({ children }) {
       </div>
     </div>
   );
-}
+};
+export default Layout;
