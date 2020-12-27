@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { Brand, make } from 'ts-brand';
 import { QuestTypeBrand } from './brand';
 
@@ -40,7 +39,15 @@ export const Skill = make<Skill>();
 export const iconPath = (skill: Skill) => `/skill-icons/${skill}_icon.png`;
 export const render = (skill: Skill) => (
   <span>
-    <Image src={iconPath(skill)} width="25" height="25" />
+    <style jsx>{`
+      .skill-icon {
+        width: 1em;
+        height: 1em;
+      }
+    `}</style>
+    <svg className="skill-icon" viewBox="0 0 25 25">
+      <image href={iconPath(skill)} width="25" height="25"></image>
+    </svg>
     {` ${skill}`}
   </span>
 );
