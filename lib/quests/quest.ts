@@ -1,6 +1,6 @@
 import { Id } from './id';
 import { Name } from './name';
-import { Skill } from './skill';
+import { Skill } from '../skills/skill';
 
 export default interface quest {
   id: Id;

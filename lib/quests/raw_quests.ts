@@ -1,6 +1,6 @@
 import { Id } from './id';
 import { Name } from './name';
-import { Skill, SkillEnum } from './skill';
+import { Skill, SkillEnum } from '../skills/skill';
 import quest from './quest';
 
 const all_quests: quest[] = [

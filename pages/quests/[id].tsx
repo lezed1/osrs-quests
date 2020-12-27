@@ -3,7 +3,7 @@ import Link from 'next/link';
 import _ from 'lodash';
 import Layout from '../../components/layout';
 import * as QuestPage from '.';
-import * as Skill from '../../lib/quests/skill';
+import * as Skill from '../../lib/skills/skill';
 import { all_quests_by_id, all_quests_by_name } from '../../lib/quests/all';
 
 export const getStaticPaths = async () => {
