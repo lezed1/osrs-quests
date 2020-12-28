@@ -20,16 +20,24 @@
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^0.16.0",
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-decorators": "^7.12.12",
+    "@vjpr/babel-plugin-parameter-decorator": "^1.0.15",
     "autoprefixer": "^10.1.0",
+    "babel-plugin-transform-typescript-metadata": "^0.3.1",
     "foundation-sites": "^6.6.3",
     "isomorphic-unfetch": "^3.1.0",
     "next": "^10.0.3",
     "next-on-netlify": "^2.6.3",
+    "pg": "^8.5.1",
     "postcss": "^8.2.1",
     "react": "16.14.0",
     "react-dom": "^17.0.1",
     "read": "^1.0.7",
-    "ts-brand": "^0.0.2"
+    "reflect-metadata": "^0.1.13",
+    "ts-brand": "^0.0.2",
+    "typeorm": "^0.2.29"
   },
   "devDependencies": {
     "@types/node": "^14.14.14",
