@@ -11,7 +11,7 @@ OSRS Quests is a website that provides information on OSRS quests. This informat
 To set up this project, clone this repository and run:
 
 ```bash
-yarn install
+npm install
 ```
 
 ### Development
@@ -19,7 +19,7 @@ yarn install
 While developing the website, use:
 
 ```bash
-yarn run dev
+npm run dev
 ```
 
 This will serve the site locally on port 3000. You can visit http://localhost:3000/ to preview the website. The Next.js development server will automatically reload the CSS or refresh the whole page, when stylesheets or content changes.
@@ -29,7 +29,7 @@ This will serve the site locally on port 3000. You can visit http://localhost:30
 Along side the development server, run:
 
 ```bash
-yarn run prettier-watch
+npm run prettier-watch
 ```
 
 This will use Prettier to style any files that have changed.
@@ -39,5 +39,5 @@ This will use Prettier to style any files that have changed.
 To build the site, use:
 
 ```bash
-yarn run build
+npm run build
 ```
