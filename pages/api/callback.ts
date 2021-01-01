@@ -1,5 +1,5 @@
 import auth0 from '../../lib/accounts/auth0';
-import { createConnection } from '../../lib/database';
+import { getConnection } from '../../lib/database';
 import { User } from '../../lib/database/entity/User';
 
 export default async function callback(req, res) {
@@ -7,7 +7,7 @@ export default async function callback(req, res) {
     await auth0.handleCallback(req, res, {
       redirectTo: '/',
       onUserLoaded: async (req, res, session, state) => {
-        await (await createConnection()).transaction(
+        await (await getConnection()).transaction(
           async (transactionalEntityManager) => {
             const userRepository = transactionalEntityManager.getRepository(
               User
