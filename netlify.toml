@@ -1,9 +1,9 @@
 [build]
-  command = "npm run build-for-netlify"
+  command = "npm run build"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
-  
+
 [[plugins]]
 package = "netlify-plugin-cache-nextjs"
 

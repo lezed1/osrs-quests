@@ -6,7 +6,6 @@
     "dev": "next dev",
     "start": "next dev",
     "build": "next build",
-    "build-for-netlify": "next build && next export",
     "lint": "eslint --ext .ts,.tsx",
     "prettier": "prettier --write --ignore-path .gitignore .",
     "prettier-check": "prettier --check --ignore-path .gitignore .",
