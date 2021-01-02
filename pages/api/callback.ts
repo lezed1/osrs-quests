@@ -16,7 +16,6 @@ export default async function callback(req, res) {
             if (!user) {
               user = new User();
               user.id = session.user.sub;
-              user.created_at = new Date();
               await userRepository.save(user);
             }
           }

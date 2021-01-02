@@ -1,6 +1,6 @@
 import 'reflect-metadata';
 import * as TypeORM from 'typeorm';
-import { User } from './entity/User';
+import { QuestStatus, SkillStatus, User } from './entity';
 
 const dbConfig = {
   url: process.env.DATABASE_URI,
@@ -19,7 +19,7 @@ const createNewConnection = async (name) => {
     name,
     type: 'postgres',
     url: dbConfig.url,
-    entities: [User],
+    entities: [User, QuestStatus, SkillStatus],
     synchronize: true,
     logging: false,
   });
