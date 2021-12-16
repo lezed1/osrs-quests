@@ -17,7 +17,7 @@
     }
   },
   "dependencies": {
-    "@auth0/nextjs-auth0": "^0.16.0",
+    "@auth0/nextjs-auth0": "^1.6.2",
     "@babel/core": "^7.12.10",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/plugin-proposal-decorators": "^7.12.12",
