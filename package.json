@@ -26,7 +26,7 @@
     "babel-plugin-transform-typescript-metadata": "^0.3.1",
     "foundation-sites": "^6.6.3",
     "isomorphic-unfetch": "^3.1.0",
-    "next": "^10.0.3",
+    "next": "^12.1.0",
     "pg": "^8.5.1",
     "postcss": "^8.2.1",
     "react": "^17.0.0",
